@@ -34,7 +34,7 @@ namespace ApprendaSmokeTestsBase
             _connectionSettingsFactory = connectionSettingsFactory;
             _smokeTestApplicationRepository = smokeTestApplicationRepository;
             _reportingService = reportingService;
-            _apiClientFactory = apiClientFactory??new SwaggerBasedApprendaApiClientFactory(_connectionSettingsFactory);
+            _apiClientFactory = apiClientFactory??new ApprendaApiClientFactory(_connectionSettingsFactory);
             _userLoginRepository = userLoginRepository??new SingleUserLoginRepository(_connectionSettingsFactory);
         }
 
@@ -49,6 +49,7 @@ namespace ApprendaSmokeTestsBase
             var session = new ApprendaTestSession(_apiClientFactory, connectionProperties, _reportingService, testName);
 
             //ping that we've started!
+            _reportingService?.ReportInfo($"Starting test {testName}", new List<string> { "teststart", testName });
 
             return session;
         }

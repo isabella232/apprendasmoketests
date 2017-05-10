@@ -24,9 +24,9 @@ namespace ApprendaAPIClient
         private string AccountRoot => _appsRoot + "/account";
         private string SOCRoot => _appsRoot + "/soc";
 
-        public ApprendaApiNonSwaggerClient(HttpClient httpClient, IConnectionSettings connectionSettings)
+        public ApprendaApiNonSwaggerClient(IConnectionSettings connectionSettings, HttpClient httpClient = null)
         {
-            _httpClient = httpClient;
+            _httpClient = httpClient??new HttpClient();
             _connectionSettings = connectionSettings;
             _appsRoot = connectionSettings.AppsUrl;
             _sessionToken = null;

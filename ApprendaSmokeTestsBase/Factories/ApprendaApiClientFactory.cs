@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using ApprendaAPIClient;
@@ -10,11 +11,11 @@ using ApprendaSmokeTestsBase.ValueItems;
 
 namespace ApprendaSmokeTestsBase.Factories
 {
-    public class SwaggerBasedApprendaApiClientFactory : IApprendaApiClientFactory
+    public class ApprendaApiClientFactory : IApprendaApiClientFactory
     {
         private readonly IConnectionSettingsFactory _connectionSettingsFactory;
 
-        public SwaggerBasedApprendaApiClientFactory(IConnectionSettingsFactory connectionSettingsFactory)
+        public ApprendaApiClientFactory(IConnectionSettingsFactory connectionSettingsFactory)
         {
             _connectionSettingsFactory = connectionSettingsFactory;
         }
@@ -22,7 +23,7 @@ namespace ApprendaSmokeTestsBase.Factories
         public IApprendaApiClient GetV1Client(ApiPortals apiPortalsToUse)
         {
             var connectionSettings = _connectionSettingsFactory.GetConnectionSettings();
-            return new ApprendaSwaggerApiClient(connectionSettings.AppsUrl);
+            return new ApprendaApiNonSwaggerClient(connectionSettings);
         }
     }
 }
