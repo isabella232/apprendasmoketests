@@ -18,20 +18,20 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
         /// </summary>
         private readonly IApprendaApiClient _client;
 
-
-        public CreatedSmokeTestApplication(IApprendaApiClient client, SmokeTestApplication source)
+        public Boolean WasCreated { get; set; }
+        public CreatedSmokeTestApplication(IApprendaApiClient client, ISmokeTestApplication source)
         {
             AppAlias = source.AppAlias;
             SmokeTestApplicationName = source.SmokeTestApplicationName;
             _client = client;
-
-            //does it exist?
-
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            if (WasCreated)
+            {
+                _client.DeleteApplication(AppAlias);
+            }
         }
     }
 }

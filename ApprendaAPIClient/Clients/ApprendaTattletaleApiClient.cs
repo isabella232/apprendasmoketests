@@ -24,9 +24,29 @@ namespace ApprendaAPIClient.Clients
         protected override async Task<T> GetResultAsync<T>(string path, string helperType = "developer", [CallerMemberName] string callingMethod = "")
         {
             var tags = new List<string> {"clientcall", callingMethod};
-            await _reportingService.ReportInfo("Starting request to " + path, tags);
+            await _reportingService.ReportInfo("Starting GET request to " + path, tags);
             var res = await base.GetResultAsync<T>(path, helperType);
-            await _reportingService.ReportInfo("Finished request to " + path, tags);
+            await _reportingService.ReportInfo("Finished GET request to " + path, tags);
+
+            return res;
+        }
+
+        protected override async Task<bool> DeleteAsync(string path, string helperType = "developer", string callingMethod = "")
+        {
+            var tags = new List<string> { "clientcall", callingMethod };
+            await _reportingService.ReportInfo("Starting DELETE request to " + path, tags);
+            var res = await base.DeleteAsync(path, helperType);
+            await _reportingService.ReportInfo("Finished GET request to " + path, tags);
+
+            return res;
+        }
+
+        protected override async Task<bool> PostAsync(string path, object body, string helperType = "developer", string callingMethod = "")
+        {
+            var tags = new List<string> { "clientcall", callingMethod };
+            await _reportingService.ReportInfo("Starting POST request to " + path, tags);
+            var res = await base.PostAsync(path, body, helperType);
+            await _reportingService.ReportInfo("Finished POST request to " + path, tags);
 
             return res;
         }

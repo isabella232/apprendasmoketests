@@ -18,6 +18,10 @@ namespace ApprendaAPIClient
 
         Task<EnrichedApplication> GetApplication(string appAlias);
 
+        Task<bool> PostApp(Application app);
+
+        Task<bool> DeleteApplication(string appAlias);
+
         Task<IEnumerable<Version>> GetVersionsForApplication(string appAlias);
 
         Task<EnrichedVersion> GetVersion(string appAlias, string versionAlias);

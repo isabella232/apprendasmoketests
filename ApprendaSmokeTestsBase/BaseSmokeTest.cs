@@ -67,14 +67,46 @@ namespace ApprendaSmokeTestsBase
             return new ApprendaTestSession(_apiClientFactory, connectionProperties, _reportingService, testName);
         }
 
-        protected Task<CreatedSmokeTestApplication> CreateAppIfDoesNotExist(string smokeTestName)
+        protected Task<CreatedSmokeTestApplication> CreateAppIfDoesNotExist(string smokeTestname)
         {
-            throw new NotImplementedException();
+            return CreateAppIfDoesNotExist(smokeTestname, smokeTestname);
+        }
+
+        protected async Task<CreatedSmokeTestApplication> CreateAppIfDoesNotExist(string smokeTestName, string appAlias)
+        {
+            var baseSmokeTest = await _smokeTestApplicationRepository.GetSmokeTestApplication(smokeTestName);
+            var client = GetClient();
+            var upgraydd = new CreatedSmokeTestApplication(client, baseSmokeTest) {AppAlias = appAlias};
+            //does it exist?
+
+            bool exists;
+            try
+            {
+                var get = await client.GetApplication(smokeTestName);
+                exists = get != null;
+            }
+            catch (Exception)
+            {
+                exists = false;
+            }
+
+            upgraydd.WasCreated = !exists;
+            return upgraydd;
         }
 
         protected Task DeleteAppIfExists(string appAlias)
         {
-            throw new NotImplementedException();
+            var client = GetClient();
+
+            return client.DeleteApplication(appAlias);
+        }
+
+        private IApprendaApiClient GetClient()
+        {
+            var client = _reportingService == null
+                ? _apiClientFactory.GetV1Client()
+                : _apiClientFactory.GetV1Client(_reportingService);
+            return client;
         }
     }
 }

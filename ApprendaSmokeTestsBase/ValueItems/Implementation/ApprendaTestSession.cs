@@ -21,7 +21,7 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
 
         private string _sessionToken;
 
-        public ApprendaTestSession(IApprendaApiClientFactory clientFactory, IConnectionSettings connectionSettings, 
+        public ApprendaTestSession(IApprendaApiClientFactory clientFactory, IConnectionSettings connectionSettings,
             ITelemetryReportingService reportingService, string testName)
         {
             _clientFactory = clientFactory;
@@ -34,7 +34,7 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
         {
             try
             {
-                _reportingService?.ReportInfo($"Ending test {_testName}", new List<string> {"testend", _testName});
+                _reportingService?.ReportInfo($"Ending test {_testName}", new List<string> { "testend", _testName });
 
                 //logout via the helper
                 _currentApiClient?.Logout(_sessionToken);
@@ -42,7 +42,7 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
             catch (Exception e)
             {
                 _reportingService?.ReportInfo($"Error while disconnecting from test {_testName}::{e.Message}",
-                    new List<string> {"testend", _testName, "logoutfailure"});
+                    new List<string> { "testend", _testName, "logoutfailure" });
             }
         }
 
@@ -50,7 +50,9 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
         {
             if (_currentApiClient == null)
             {
-                _currentApiClient = _clientFactory.GetV1Client();
+                _currentApiClient = _reportingService == null 
+                    ? _clientFactory.GetV1Client() 
+                    : _clientFactory.GetV1Client(_reportingService);
             }
 
             if (string.IsNullOrEmpty(_sessionToken))

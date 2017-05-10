@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using ApprendaAPIClient.Services;
 using ApprendaAPIClient.Services.ClientHelpers;
 using IO.Swagger.Model;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Application = ApprendaAPIClient.Models.DeveloperPortal.Application;
 using Version = IO.Swagger.Model.Version;
 
@@ -40,6 +42,16 @@ namespace ApprendaAPIClient.Clients
             return GetResultAsync<EnrichedApplication>("apps/" + appAlias);
         }
 
+        public Task<bool> PostApp(Application app)
+        {
+            return PostAsync("apps", app);
+        }
+
+        public Task<bool> DeleteApplication(string appAlias)
+        {
+            return DeleteAsync("apps/" + appAlias);
+        }
+
         public Task<IEnumerable<Version>> GetVersionsForApplication(string appAlias)
         {
             return GetResultAsync<IEnumerable<Version>>("versions/" + appAlias);
@@ -61,6 +73,32 @@ namespace ApprendaAPIClient.Clients
             return JsonConvert.DeserializeObject<T>(res);
         }
 
+        protected virtual async Task<bool> DeleteAsync(string path, string helperType = "developer",
+            [CallerMemberName] string callingMethod = "")
+        {
+            var helper = new GenericApiHelper(ConnectionSettings, helperType);
+            var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri(path);
+            var client = GetClient(uri, SessionToken);
+
+            var res = await client.DeleteAsync(uri);
+
+            return res.IsSuccessStatusCode;
+        }
+
+        protected virtual async Task<bool> PostAsync(string path, object body, string helperType = "developer",
+            [CallerMemberName] string callingMethod = "")
+        {
+            var helper = new GenericApiHelper(ConnectionSettings, helperType);
+            var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri(path);
+            var client = GetClient(uri, SessionToken);
+
+            var formatter = new JsonMediaTypeFormatter { Indent = true };
+            formatter.SerializerSettings.Converters.Add(new StringEnumConverter());
+
+            var res = await client.PostAsync(uri, body, formatter);
+
+            return res.IsSuccessStatusCode;
+        }
         private HttpClient GetClient(Uri baseAddress, string authenticationToken = null, TimeSpan? timeout = null, string mediaType = null)
         {
             var client = RestApiProxyBase.GetVerbMaintainingClient();

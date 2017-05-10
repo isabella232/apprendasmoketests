@@ -70,7 +70,7 @@
     <Compile Include="EasySmokeTest.cs" />
     <Compile Include="NoOpSmokeTestApplicationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\CreateAppTest.cs" />
+    <Compile Include="Tests\ApplicationSmokeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApprendaAPIClient\AccountPortalSwagger\csharp-client\src\IO.Swagger\AccountPortal.Swagger.csproj">
