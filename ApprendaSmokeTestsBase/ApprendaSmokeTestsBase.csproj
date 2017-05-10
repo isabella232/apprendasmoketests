@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ApprendaSmokeTestsBase</RootNamespace>
     <AssemblyName>ApprendaSmokeTestsBase</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,10 +68,14 @@
     <Compile Include="BaseSmokeTest.cs" />
     <Compile Include="Factories\IApprendaApiClientFactory.cs" />
     <Compile Include="Factories\IConnectionSettingsFactory.cs" />
+    <Compile Include="Factories\SwaggerBasedApprendaApiClientFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implementation\SingleUserLoginRepository.cs" />
     <Compile Include="Repositories\ISmokeTestApplicationRepository.cs" />
     <Compile Include="Repositories\IUserLoginRepository.cs" />
     <Compile Include="Services\IApprendaApiClient.cs" />
+    <Compile Include="Services\Implementation\ApprendaSwaggerApiClient.cs" />
+    <Compile Include="Services\Implementation\ClientHelpers\AccountApiHelper.cs" />
     <Compile Include="Services\Implementation\ClientHelpers\DefaultRestApiContext.cs" />
     <Compile Include="Services\Implementation\ClientHelpers\GenericeApiHelper.cs" />
     <Compile Include="Services\Implementation\ClientHelpers\Handlers.cs" />
@@ -86,17 +91,22 @@
     <Compile Include="ValueItems\Implementation\ApprendaTestSession.cs" />
     <Compile Include="ValueItems\Implementation\ConnectionSettings.cs" />
     <Compile Include="ValueItems\IApprendaTestSession.cs" />
+    <Compile Include="ValueItems\Implementation\CreatedSmokeTestApplication.cs" />
     <Compile Include="ValueItems\Implementation\UserLogin.cs" />
     <Compile Include="ValueItems\ISmokeTestApplication.cs" />
     <Compile Include="ValueItems\Implementation\SmokeTestApplication.cs" />
     <Compile Include="ValueItems\IUserLogin.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\Implementation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevPortal.Swagger\DevPortal.Swagger\DevPortal.Swagger.csproj">
+      <Project>{4196ca90-9f7b-438b-89be-409b28e3c0ee}</Project>
+      <Name>DevPortal.Swagger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

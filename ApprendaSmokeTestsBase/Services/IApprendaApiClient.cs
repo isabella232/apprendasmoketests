@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IO.Swagger.Model;
 
 namespace ApprendaSmokeTestsBase.Services
 {
@@ -12,5 +13,9 @@ namespace ApprendaSmokeTestsBase.Services
     /// </summary>
     public interface IApprendaApiClient
     {
+        Task<Application> GetApplication(string appAlias);
+        Task<IEnumerable<Application>> GetAllApplications();
+
+        Task PromoteApp(string appAlias);
     }
 }

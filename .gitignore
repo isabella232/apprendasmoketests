@@ -4,3 +4,5 @@ ApprendaSmokeTestsBase/obj/
 obj/
 packages/
 DefaultApprendaSmokeTests/bin/
+DevPortal.Swagger/DevPortal.Swagger/bin/
+DevPortal.Swagger/DevPortal.Swagger.Test/bin/

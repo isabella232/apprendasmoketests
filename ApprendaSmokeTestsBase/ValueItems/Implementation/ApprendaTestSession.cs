@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ApprendaSmokeTestsBase.Factories;
 using ApprendaSmokeTestsBase.Services;
 using ApprendaSmokeTestsBase.Services.Implementation.ClientHelpers;
@@ -17,67 +13,62 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
     {
         private readonly IApprendaApiClientFactory _clientFactory;
         private readonly IConnectionSettings _connectionSettings;
-        private IApprendaApiClient _client;
-        private readonly IDictionary<ApiPortals, LoggedInPortalAndHelper> _helpersInUse;
+        private readonly ITelemetryReportingService _reportingService;
+        private readonly string _testName;
 
-        private class LoggedInPortalAndHelper
-        {
-            public ApiPortals Portal;
-            public string Token;
-            public IRestApiClientHelper Helper;
-        }
-        public ApprendaTestSession(IApprendaApiClientFactory clientFactory, IConnectionSettings connectionSettings)
+        private IApprendaApiClient _client;
+        private string _sessionToken;
+        private IRestApiClientHelper _currentHelper;
+
+        public ApprendaTestSession(IApprendaApiClientFactory clientFactory, IConnectionSettings connectionSettings, 
+            ITelemetryReportingService reportingService, string testName)
         {
             _clientFactory = clientFactory;
             _connectionSettings = connectionSettings;
-            _helpersInUse = new ConcurrentDictionary<ApiPortals, LoggedInPortalAndHelper>();
+            _reportingService = reportingService;
+            _testName = testName;
         }
 
         public void Dispose()
         {
-            //logout via the helper
-            foreach (var bundle in _helpersInUse.Values)
+            try
             {
-                bundle.Helper?.Authenticator?.Logout(bundle.Token);
+                _reportingService?.ReportInfo($"Ending test {_testName}", new List<string> {"testend", _testName});
+
+                //logout via the helper
+                _currentHelper?.Authenticator?.Logout(_sessionToken);
+            }
+            catch (Exception e)
+            {
+                _reportingService?.ReportInfo($"Error while disconnecting from test {_testName}",
+                    new List<string> {"testend", _testName, "logoutfailure"});
             }
         }
 
         public IApprendaApiClient GetClient(ApiPortals portalsToUse)
         {
+            switch (portalsToUse)
+            {
+                    case ApiPortals.Account:
+                        _currentHelper = new AccountApiHelper(_connectionSettings);
+                        break;
+                    case ApiPortals.Developer:
+                        _currentHelper = new GenericApiHelper(_connectionSettings, "developer");
+                        break;
+                    case ApiPortals.SOC:
+                        _currentHelper = new SocApiHelper(_connectionSettings);
+                        break;
+            }
+
+            if (string.IsNullOrEmpty(_sessionToken))
+            {
+                _sessionToken = _currentHelper.Authenticator?.Login(_connectionSettings.UserLogin.UserName,
+                    _connectionSettings.UserLogin.Password);
+            }
             _client = _clientFactory.GetV1Client(portalsToUse);
 
-            //login and get authentication helpers here or in the constructor?
-            LogInPortalAndHelper(portalsToUse);
-
+            _reportingService?.ReportInfo($"Starting test {_testName}", new List<string> {"teststart", _testName});
             return _client;
-        }
-
-        private void LogInPortalAndHelper(ApiPortals portal)
-        {
-            if (!_helpersInUse.ContainsKey(portal))
-            {
-                IRestApiClientHelper helper = null;
-                switch (portal)
-                {
-                        case ApiPortals.Account:
-                        case ApiPortals.Developer:
-                        case ApiPortals.SOC:
-                            helper = new SocApiHelper(_connectionSettings);
-                            break;
-                    default:
-                        throw new ArgumentException();
-                }
-
-                var token = helper.Authenticator.Login(_connectionSettings.UserLogin.UserName, _connectionSettings.UserLogin.Password);
-
-                _helpersInUse.Add(portal, new LoggedInPortalAndHelper
-                    {
-                        Helper = helper,
-                        Portal =  portal,
-                        Token = token
-                    }
-                    );
-            }
         }
     }
 }
