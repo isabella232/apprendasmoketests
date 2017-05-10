@@ -19,23 +19,42 @@ namespace ApprendaSmokeTestsBase
         private readonly ISmokeTestApplicationRepository _smokeTestApplicationRepository;
         private readonly ITelemetryReportingService _reportingService;
         private readonly IApprendaApiClientFactory _apiClientFactory;
+        private readonly IUserLoginRepository _userLoginRepository;
 
         protected BaseSmokeTest(IConnectionSettingsFactory connectionSettingsFactory, 
             ISmokeTestApplicationRepository smokeTestApplicationRepository, 
             ITelemetryReportingService reportingService, 
-            IApprendaApiClientFactory apiClientFactory)
+            IApprendaApiClientFactory apiClientFactory, IUserLoginRepository userLoginRepository)
         {
             _connectionSettingsFactory = connectionSettingsFactory;
             _smokeTestApplicationRepository = smokeTestApplicationRepository;
             _reportingService = reportingService;
             _apiClientFactory = apiClientFactory;
+            _userLoginRepository = userLoginRepository;
         }
 
 
         protected IApprendaTestSession StartSession()
         {
-            var session = new ApprendaTestSession(_apiClientFactory);
+            var connectionProperties = _connectionSettingsFactory.GetConnectionSettings();
+            if (connectionProperties.UserLogin == null)
+            {
+                connectionProperties.UserLogin = _userLoginRepository.GetNextAvailableUserLogin();
+            }
+            var session = new ApprendaTestSession(_apiClientFactory, connectionProperties);
             return session;
+        }
+
+        protected IApprendaTestSession StartSession(string userName, string password)
+        {
+            var connectionProperties = _connectionSettingsFactory.GetConnectionSettings();
+            connectionProperties.UserLogin = new UserLogin
+            {
+                UserName = userName,
+                Password = password
+            };
+
+            return new ApprendaTestSession(_apiClientFactory, connectionProperties);
         }
     }
 }

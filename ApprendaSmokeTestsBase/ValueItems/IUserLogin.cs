@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace ApprendaSmokeTestsBase.ValueItems
 {
-    [Flags]
-    public enum ApiPortals
+    public interface IUserLogin
     {
-        SOC,
-        Developer,
-        Account
+        string UserName { get; set; }
+        string Password { get; set; }
     }
 }

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F67E38D9-5B35-4662-A783-810D852F8569}</ProjectGuid>
+    <ProjectGuid>{A86D818F-ED50-47C8-AAB0-39644312A871}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApprendaSmokeTests</RootNamespace>
-    <AssemblyName>ApprendaSmokeTests</AssemblyName>
+    <RootNamespace>DefaultApprendaSmokeTests</RootNamespace>
+    <AssemblyName>DefaultApprendaSmokeTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +48,9 @@
       <Project>{f760a373-b649-425c-9290-9703d643c3f2}</Project>
       <Name>ApprendaSmokeTestsBase</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

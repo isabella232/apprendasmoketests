@@ -15,14 +15,12 @@ namespace ApprendaSmokeTestsBase.ValueItems
         /// Base url of the platform - apps.apprenda.test
         /// </summary>
         string AppsUrl { get; }
+
         /// <summary>
-        /// Admin user to login as
+        /// User to login as for this test
         /// </summary>
-        string AdminUser { get; }
-        /// <summary>
-        /// Admin password to login as
-        /// </summary>
-        string AdminPassword { get; }
+        IUserLogin UserLogin { get; set; }
+
         /// <summary>
         /// Data directory for files to retrieve to be used by the test
         /// </summary>

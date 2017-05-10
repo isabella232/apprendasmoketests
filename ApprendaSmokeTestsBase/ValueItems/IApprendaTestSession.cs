@@ -12,6 +12,6 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
     /// </summary>
     public interface IApprendaTestSession : IDisposable
     {
-        IApprendaApiClient GetClient(ApiPortals portalsToUse = ApiPortals.All);
+        IApprendaApiClient GetClient(ApiPortals portalsToUse);
     }
 }

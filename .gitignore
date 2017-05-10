@@ -2,3 +2,5 @@
 ApprendaSmokeTestsBase/bin/
 ApprendaSmokeTestsBase/obj/
 obj/
+packages/
+DefaultApprendaSmokeTests/bin/
