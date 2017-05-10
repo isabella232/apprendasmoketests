@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ApprendaAPIClient;
-using ApprendaSmokeTestsBase.Factories;
+using ApprendaAPIClient.Factories;
 using ApprendaSmokeTestsBase.ValueItems;
 
 namespace ApprendaSmokeTestsBase.Repositories.Implementation

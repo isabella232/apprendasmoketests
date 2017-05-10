@@ -66,14 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseSmokeTest.cs" />
-    <Compile Include="Factories\IApprendaApiClientFactory.cs" />
-    <Compile Include="Factories\IConnectionSettingsFactory.cs" />
-    <Compile Include="Factories\ApprendaApiClientFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Implementation\SingleUserLoginRepository.cs" />
     <Compile Include="Repositories\ISmokeTestApplicationRepository.cs" />
     <Compile Include="Repositories\IUserLoginRepository.cs" />
-    <Compile Include="Services\ITelemetryReportingService.cs" />
     <Compile Include="ValueItems\ApiPortals.cs" />
     <Compile Include="ValueItems\Implementation\ApprendaTestSession.cs" />
     <Compile Include="ValueItems\IApprendaTestSession.cs" />

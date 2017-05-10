@@ -51,11 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApprendaApiNonSwaggerClient.cs" />
-    <Compile Include="ApprendaSwaggerApiClient.cs" />
-    <Compile Include="BaseApprendaApiClient.cs" />
+    <Compile Include="Clients\ApprendaApiClient.cs" />
+    <Compile Include="Clients\ApprendaSwaggerApiClient.cs" />
+    <Compile Include="Clients\ApprendaTattletaleApiClient.cs" />
+    <Compile Include="Clients\BaseApprendaApiClient.cs" />
     <Compile Include="ConnectionSettings.cs" />
-    <Compile Include="IApprendaAccountPortalApiClient.cs" />
+    <Compile Include="Clients\IApprendaAccountPortalApiClient.cs" />
+    <Compile Include="Factories\ApprendaApiClientFactory.cs" />
+    <Compile Include="Factories\IApprendaApiClientFactory.cs" />
+    <Compile Include="Factories\IConnectionSettingsFactory.cs" />
     <Compile Include="IApprendaApiClient.cs" />
     <Compile Include="IApprendaDeveloperPortalApiClient.cs" />
     <Compile Include="IApprendaSOCPortalAPIClient.cs" />
@@ -87,6 +91,7 @@
     <Compile Include="Services\ClientHelpers\SocApiHelper.cs" />
     <Compile Include="Services\ClientHelpers\VerbMaintainingRedirectionHandler.cs" />
     <Compile Include="Services\ClientUriBuilder.cs" />
+    <Compile Include="Services\ITelemetryReportingService.cs" />
     <Compile Include="Services\SwaggerModelMapperService.cs" />
     <Compile Include="UserLogin.cs" />
   </ItemGroup>

@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using ApprendaAPIClient.Models;
-using ApprendaAPIClient.Models.AccountPortal;
-using ApprendaAPIClient.Services;
-using IO.Swagger.Api;
-using IO.Swagger.Model;
-using Application = ApprendaAPIClient.Models.DeveloperPortal.Application;
-
-namespace ApprendaAPIClient
+﻿namespace ApprendaAPIClient.Clients
 {
+    /*
     public class ApprendaSwaggerApiClient : BaseApprendaApiClient, IApprendaApiClient
     {
         private readonly SwaggerModelMapperService _modelMapper;
@@ -33,5 +24,5 @@ namespace ApprendaAPIClient
         {
             throw new NotImplementedException();
         }
-    }
+    }*/
 }

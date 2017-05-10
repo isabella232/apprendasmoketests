@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ApprendaAPIClient;
-using ApprendaSmokeTestsBase.Factories;
+using ApprendaAPIClient.Factories;
+using ApprendaAPIClient.Services;
 using ApprendaSmokeTestsBase.Services;
 
 namespace ApprendaSmokeTestsBase.ValueItems.Implementation
@@ -49,7 +50,7 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
         {
             if (_currentApiClient == null)
             {
-                _currentApiClient = _clientFactory.GetV1Client(portalsToUse);
+                _currentApiClient = _clientFactory.GetV1Client();
             }
 
             if (string.IsNullOrEmpty(_sessionToken))

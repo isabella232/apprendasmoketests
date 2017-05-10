@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApprendaSmokeTestsBase.Services
+namespace ApprendaAPIClient.Services
 {
     /// <summary>
     /// Reports timestamped logs to a data store

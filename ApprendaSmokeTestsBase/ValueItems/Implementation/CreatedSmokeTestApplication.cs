@@ -18,11 +18,15 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
         /// </summary>
         private readonly IApprendaApiClient _client;
 
-        private Guid _appId;
 
-        public CreatedSmokeTestApplication(IApprendaApiClient client)
+        public CreatedSmokeTestApplication(IApprendaApiClient client, SmokeTestApplication source)
         {
+            AppAlias = source.AppAlias;
+            SmokeTestApplicationName = source.SmokeTestApplicationName;
             _client = client;
+
+            //does it exist?
+
         }
 
         public void Dispose()

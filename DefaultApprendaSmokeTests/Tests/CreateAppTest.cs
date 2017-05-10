@@ -17,9 +17,23 @@ namespace DefaultApprendaSmokeTests.Tests
                 var apps = (await client.GetApplications()).ToList();
 
                 Assert.True(apps.Any());
-                var first = apps.First();
+                var firstApplication = apps.First();
 
-                Assert.False(string.IsNullOrWhiteSpace(first.Alias));
+                Assert.False(string.IsNullOrWhiteSpace(firstApplication.Alias));
+
+                var reget = await client.GetApplication(firstApplication.Alias);
+
+                Assert.NotNull(reget);
+
+                var versions = (await client.GetVersionsForApplication(firstApplication.Alias)).ToList();
+
+                Assert.NotNull(versions);
+                Assert.True(versions.Any());
+
+                var singleVersion = await client.GetVersion(firstApplication.Alias, versions.First().Alias);
+
+                Assert.NotNull(singleVersion);
+                Assert.Equal(versions.First().Alias, singleVersion.Alias);
             }
         }
     }

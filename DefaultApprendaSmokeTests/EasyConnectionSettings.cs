@@ -1,6 +1,6 @@
 ﻿using System;
 using ApprendaAPIClient;
-using ApprendaSmokeTestsBase.Factories;
+using ApprendaAPIClient.Factories;
 
 namespace DefaultApprendaSmokeTests
 {
