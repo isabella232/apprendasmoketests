@@ -32,7 +32,7 @@ namespace ApprendaSmokeTestsBase
             _connectionSettingsFactory = connectionSettingsFactory;
             _smokeTestApplicationRepository = smokeTestApplicationRepository;
             _reportingService = reportingService;
-            _apiClientFactory = apiClientFactory??new SwaggerBasedApprendaApiClientFactory();
+            _apiClientFactory = apiClientFactory??new SwaggerBasedApprendaApiClientFactory(_connectionSettingsFactory);
             _userLoginRepository = userLoginRepository??new SingleUserLoginRepository(_connectionSettingsFactory);
         }
 

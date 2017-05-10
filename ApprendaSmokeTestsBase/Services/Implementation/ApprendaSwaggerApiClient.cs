@@ -13,7 +13,7 @@ namespace ApprendaSmokeTestsBase.Services.Implementation
         private readonly string _basePath;
         public ApprendaSwaggerApiClient(string basePath)
         {
-            
+            _basePath = basePath;
         }
 
         public async Task<Application> GetApplication(string appAlias)
