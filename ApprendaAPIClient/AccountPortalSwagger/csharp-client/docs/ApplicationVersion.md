@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **ApplicationName** | **string** |  | [optional] 
 **VersionAlias** | **string** |  | [optional] 
 **Stage** | **string** |  | [optional] 
-**Plans** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
-**Securables** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
+**Plans** | [**ResourceBase**](ResourceBase.md) |  | [optional] 
+**Securables** | [**ResourceBase**](ResourceBase.md) |  | [optional] 
 **Href** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

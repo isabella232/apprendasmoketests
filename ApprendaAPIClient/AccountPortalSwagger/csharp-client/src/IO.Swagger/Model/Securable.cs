@@ -43,7 +43,7 @@ namespace IO.Swagger.Model
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name (required).</param>
         /// <param name="Roles">Roles.</param>
-        public Securable(InlineResponse200Plans ApplicationVersion = default(InlineResponse200Plans), string Href = default(string), bool? IsRuntime = false, string Id = default(string), string Name = default(string), List<InlineResponse200Plans> Roles = default(List<InlineResponse200Plans>))
+        public Securable(ResourceBase ApplicationVersion = default(ResourceBase), string Href = default(string), bool? IsRuntime = false, string Id = default(string), string Name = default(string), List<ResourceBase> Roles = default(List<ResourceBase>))
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets ApplicationVersion
         /// </summary>
         [DataMember(Name="applicationVersion", EmitDefaultValue=false)]
-        public InlineResponse200Plans ApplicationVersion { get; set; }
+        public ResourceBase ApplicationVersion { get; set; }
         /// <summary>
         /// Gets or Sets Href
         /// </summary>
@@ -98,7 +98,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<InlineResponse200Plans> Roles { get; set; }
+        public List<ResourceBase> Roles { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -50,7 +50,7 @@ namespace IO.Swagger.Model
         /// <param name="Roles">Roles.</param>
         /// <param name="Subscriptions">Subscriptions.</param>
         /// <param name="Suffix">Suffix.</param>
-        public User(string Description = default(string), string Email = default(string), string FirstName = default(string), string Href = default(string), string Identifier = default(string), bool? IsEnabled = false, string LastName = default(string), string MiddleName = default(string), string Name = default(string), string Prefix = default(string), InlineResponse200Plans Roles = default(InlineResponse200Plans), InlineResponse200Plans Subscriptions = default(InlineResponse200Plans), string Suffix = default(string))
+        public User(string Description = default(string), string Email = default(string), string FirstName = default(string), string Href = default(string), string Identifier = default(string), bool? IsEnabled = false, string LastName = default(string), string MiddleName = default(string), string Name = default(string), string Prefix = default(string), ResourceBase Roles = default(ResourceBase), ResourceBase Subscriptions = default(ResourceBase), string Suffix = default(string))
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -137,12 +137,12 @@ namespace IO.Swagger.Model
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public InlineResponse200Plans Roles { get; set; }
+        public ResourceBase Roles { get; set; }
         /// <summary>
         /// Gets or Sets Subscriptions
         /// </summary>
         [DataMember(Name="subscriptions", EmitDefaultValue=false)]
-        public InlineResponse200Plans Subscriptions { get; set; }
+        public ResourceBase Subscriptions { get; set; }
         /// <summary>
         /// Gets or Sets Suffix
         /// </summary>

@@ -39,7 +39,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Href">Href.</param>
         /// <param name="Items">Items (required).</param>
-        public UnpagedResourceBaseUser(string Href = default(string), List<InlineResponse2004AssignedTo> Items = default(List<InlineResponse2004AssignedTo>))
+        public UnpagedResourceBaseUser(string Href = default(string), List<User> Items = default(List<User>))
         {
             // to ensure "Items" is required (not null)
             if (Items == null)
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<InlineResponse2004AssignedTo> Items { get; set; }
+        public List<User> Items { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="apiv1platformupgradestatusget"></a>
 # **ApiV1PlatformUpgradestatusGet**
-> InlineResponse2005 ApiV1PlatformUpgradestatusGet ()
+> UpgradeStatus ApiV1PlatformUpgradestatusGet ()
 
 Check if the Platform is upgrading
 
@@ -35,7 +35,7 @@ namespace Example
             try
             {
                 // Check if the Platform is upgrading
-                InlineResponse2005 result = apiInstance.ApiV1PlatformUpgradestatusGet();
+                UpgradeStatus result = apiInstance.ApiV1PlatformUpgradestatusGet();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**UpgradeStatus**](UpgradeStatus.md)
 
 ### Authorization
 

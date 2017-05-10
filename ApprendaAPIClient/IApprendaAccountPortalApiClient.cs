@@ -11,6 +11,5 @@ namespace ApprendaAPIClient
 {
     public interface IApprendaAccountPortalApiClient
     {
-        PagedResourceBase<ApplicationVersionResource> GetAccountApplicationVersions();
     }
 }

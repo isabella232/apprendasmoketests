@@ -73,7 +73,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string applicationVersionKey = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeyGet(applicationVersionKey);
-            //Assert.IsInstanceOf<InlineResponse200Items> (response, "response is InlineResponse200Items");
+            //Assert.IsInstanceOf<ApplicationVersion> (response, "response is ApplicationVersion");
         }
         
         /// <summary>
@@ -88,7 +88,7 @@ namespace IO.Swagger.Test
             //string sortBy = null;
             //string sortOrder = null;
             //var response = instance.ApiV1ApplicationVersionsGet(pageSize, pageNumber, sortBy, sortOrder);
-            //Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200");
+            //Assert.IsInstanceOf<PagedResourceBaseApplicationVersion> (response, "response is PagedResourceBaseApplicationVersion");
         }
         
     }

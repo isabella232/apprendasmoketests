@@ -32,8 +32,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet (string applicationVersionKey);
+        /// <returns>UnpagedResourceBaseSecurable</returns>
+        UnpagedResourceBaseSecurable ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet (string applicationVersionKey);
 
         /// <summary>
         /// Get all securables for an application version
@@ -43,8 +43,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetWithHttpInfo (string applicationVersionKey);
+        /// <returns>ApiResponse of UnpagedResourceBaseSecurable</returns>
+        ApiResponse<UnpagedResourceBaseSecurable> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Get a securable for an application version
         /// </summary>
@@ -54,8 +54,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>InlineResponse2002Items</returns>
-        InlineResponse2002Items ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet (string applicationVersionKey, string securableId);
+        /// <returns>Securable</returns>
+        Securable ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet (string applicationVersionKey, string securableId);
 
         /// <summary>
         /// Get a securable for an application version
@@ -66,8 +66,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>ApiResponse of InlineResponse2002Items</returns>
-        ApiResponse<InlineResponse2002Items> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetWithHttpInfo (string applicationVersionKey, string securableId);
+        /// <returns>ApiResponse of Securable</returns>
+        ApiResponse<Securable> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetWithHttpInfo (string applicationVersionKey, string securableId);
         /// <summary>
         /// Remove role from a securable
         /// </summary>
@@ -102,8 +102,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId);
+        /// <returns>UnpagedResourceBaseRole</returns>
+        UnpagedResourceBaseRole ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId);
 
         /// <summary>
         /// Get all roles using a securable
@@ -114,8 +114,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId);
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        ApiResponse<UnpagedResourceBaseRole> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId);
         /// <summary>
         /// Assign role(s) to a securable
         /// </summary>
@@ -149,8 +149,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 ApiV1RolesRoleIdSecurablesGet (string roleId);
+        /// <returns>UnpagedResourceBaseSecurable</returns>
+        UnpagedResourceBaseSecurable ApiV1RolesRoleIdSecurablesGet (string roleId);
 
         /// <summary>
         /// Get all securables for a role
@@ -160,8 +160,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId);
+        /// <returns>ApiResponse of UnpagedResourceBaseSecurable</returns>
+        ApiResponse<UnpagedResourceBaseSecurable> ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -172,8 +172,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsync (string applicationVersionKey);
+        /// <returns>Task of UnpagedResourceBaseSecurable</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseSecurable> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsync (string applicationVersionKey);
 
         /// <summary>
         /// Get all securables for an application version
@@ -183,8 +183,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsyncWithHttpInfo (string applicationVersionKey);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSecurable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSecurable>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsyncWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Get a securable for an application version
         /// </summary>
@@ -194,8 +194,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of InlineResponse2002Items</returns>
-        System.Threading.Tasks.Task<InlineResponse2002Items> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsync (string applicationVersionKey, string securableId);
+        /// <returns>Task of Securable</returns>
+        System.Threading.Tasks.Task<Securable> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsync (string applicationVersionKey, string securableId);
 
         /// <summary>
         /// Get a securable for an application version
@@ -206,8 +206,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002Items)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002Items>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsyncWithHttpInfo (string applicationVersionKey, string securableId);
+        /// <returns>Task of ApiResponse (Securable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Securable>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsyncWithHttpInfo (string applicationVersionKey, string securableId);
         /// <summary>
         /// Remove role from a securable
         /// </summary>
@@ -242,8 +242,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId);
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId);
 
         /// <summary>
         /// Get all roles using a securable
@@ -254,8 +254,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId);
         /// <summary>
         /// Assign role(s) to a securable
         /// </summary>
@@ -289,8 +289,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> ApiV1RolesRoleIdSecurablesGetAsync (string roleId);
+        /// <returns>Task of UnpagedResourceBaseSecurable</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseSecurable> ApiV1RolesRoleIdSecurablesGetAsync (string roleId);
 
         /// <summary>
         /// Get all securables for a role
@@ -300,8 +300,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSecurable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSecurable>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId);
         #endregion Asynchronous Operations
     }
 
@@ -419,10 +419,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet (string applicationVersionKey)
+        /// <returns>UnpagedResourceBaseSecurable</returns>
+        public UnpagedResourceBaseSecurable ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet (string applicationVersionKey)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetWithHttpInfo(applicationVersionKey);
+             ApiResponse<UnpagedResourceBaseSecurable> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
         }
 
@@ -431,8 +431,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetWithHttpInfo (string applicationVersionKey)
+        /// <returns>ApiResponse of UnpagedResourceBaseSecurable</returns>
+        public ApiResponse< UnpagedResourceBaseSecurable > ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -478,9 +478,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSecurable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (UnpagedResourceBaseSecurable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSecurable)));
             
         }
 
@@ -489,10 +489,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsync (string applicationVersionKey)
+        /// <returns>Task of UnpagedResourceBaseSecurable</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseSecurable> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsync (string applicationVersionKey)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsyncWithHttpInfo(applicationVersionKey);
+             ApiResponse<UnpagedResourceBaseSecurable> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsyncWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
 
         }
@@ -502,8 +502,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsyncWithHttpInfo (string applicationVersionKey)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSecurable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSecurable>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesGetAsyncWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -549,9 +549,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSecurable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (UnpagedResourceBaseSecurable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSecurable)));
             
         }
 
@@ -561,10 +561,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>InlineResponse2002Items</returns>
-        public InlineResponse2002Items ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet (string applicationVersionKey, string securableId)
+        /// <returns>Securable</returns>
+        public Securable ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet (string applicationVersionKey, string securableId)
         {
-             ApiResponse<InlineResponse2002Items> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetWithHttpInfo(applicationVersionKey, securableId);
+             ApiResponse<Securable> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetWithHttpInfo(applicationVersionKey, securableId);
              return localVarResponse.Data;
         }
 
@@ -574,8 +574,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>ApiResponse of InlineResponse2002Items</returns>
-        public ApiResponse< InlineResponse2002Items > ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetWithHttpInfo (string applicationVersionKey, string securableId)
+        /// <returns>ApiResponse of Securable</returns>
+        public ApiResponse< Securable > ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetWithHttpInfo (string applicationVersionKey, string securableId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -625,9 +625,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002Items>(localVarStatusCode,
+            return new ApiResponse<Securable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002Items)));
+                (Securable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Securable)));
             
         }
 
@@ -637,10 +637,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of InlineResponse2002Items</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002Items> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsync (string applicationVersionKey, string securableId)
+        /// <returns>Task of Securable</returns>
+        public async System.Threading.Tasks.Task<Securable> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsync (string applicationVersionKey, string securableId)
         {
-             ApiResponse<InlineResponse2002Items> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsyncWithHttpInfo(applicationVersionKey, securableId);
+             ApiResponse<Securable> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsyncWithHttpInfo(applicationVersionKey, securableId);
              return localVarResponse.Data;
 
         }
@@ -651,8 +651,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002Items)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002Items>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsyncWithHttpInfo (string applicationVersionKey, string securableId)
+        /// <returns>Task of ApiResponse (Securable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Securable>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGetAsyncWithHttpInfo (string applicationVersionKey, string securableId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -702,9 +702,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002Items>(localVarStatusCode,
+            return new ApiResponse<Securable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002Items)));
+                (Securable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Securable)));
             
         }
 
@@ -883,10 +883,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
+        /// <returns>UnpagedResourceBaseRole</returns>
+        public UnpagedResourceBaseRole ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo(applicationVersionKey, securableId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo(applicationVersionKey, securableId);
              return localVarResponse.Data;
         }
 
@@ -896,8 +896,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId)
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        public ApiResponse< UnpagedResourceBaseRole > ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -947,9 +947,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -959,10 +959,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId)
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo(applicationVersionKey, securableId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo(applicationVersionKey, securableId);
              return localVarResponse.Data;
 
         }
@@ -973,8 +973,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -1024,9 +1024,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -1206,10 +1206,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 ApiV1RolesRoleIdSecurablesGet (string roleId)
+        /// <returns>UnpagedResourceBaseSecurable</returns>
+        public UnpagedResourceBaseSecurable ApiV1RolesRoleIdSecurablesGet (string roleId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = ApiV1RolesRoleIdSecurablesGetWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseSecurable> localVarResponse = ApiV1RolesRoleIdSecurablesGetWithHttpInfo(roleId);
              return localVarResponse.Data;
         }
 
@@ -1218,8 +1218,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId)
+        /// <returns>ApiResponse of UnpagedResourceBaseSecurable</returns>
+        public ApiResponse< UnpagedResourceBaseSecurable > ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -1265,9 +1265,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSecurable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (UnpagedResourceBaseSecurable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSecurable)));
             
         }
 
@@ -1276,10 +1276,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> ApiV1RolesRoleIdSecurablesGetAsync (string roleId)
+        /// <returns>Task of UnpagedResourceBaseSecurable</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseSecurable> ApiV1RolesRoleIdSecurablesGetAsync (string roleId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseSecurable> localVarResponse = await ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo(roleId);
              return localVarResponse.Data;
 
         }
@@ -1289,8 +1289,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSecurable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSecurable>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -1336,9 +1336,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSecurable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (UnpagedResourceBaseSecurable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSecurable)));
             
         }
 

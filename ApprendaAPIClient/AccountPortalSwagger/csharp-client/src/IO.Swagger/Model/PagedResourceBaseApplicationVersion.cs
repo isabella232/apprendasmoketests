@@ -45,7 +45,7 @@ namespace IO.Swagger.Model
         /// <param name="PreviousPage">PreviousPage.</param>
         /// <param name="TotalItems">TotalItems.</param>
         /// <param name="TotalPages">TotalPages.</param>
-        public PagedResourceBaseApplicationVersion(int? CurrentPage = default(int?), string Href = default(string), List<InlineResponse200Items> Items = default(List<InlineResponse200Items>), InlineResponse200Plans NextPage = default(InlineResponse200Plans), int? PageSize = default(int?), InlineResponse200Plans PreviousPage = default(InlineResponse200Plans), long? TotalItems = default(long?), int? TotalPages = default(int?))
+        public PagedResourceBaseApplicationVersion(int? CurrentPage = default(int?), string Href = default(string), List<ApplicationVersion> Items = default(List<ApplicationVersion>), ResourceBase NextPage = default(ResourceBase), int? PageSize = default(int?), ResourceBase PreviousPage = default(ResourceBase), long? TotalItems = default(long?), int? TotalPages = default(int?))
         {
             // to ensure "Items" is required (not null)
             if (Items == null)
@@ -79,12 +79,12 @@ namespace IO.Swagger.Model
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<InlineResponse200Items> Items { get; set; }
+        public List<ApplicationVersion> Items { get; set; }
         /// <summary>
         /// Gets or Sets NextPage
         /// </summary>
         [DataMember(Name="nextPage", EmitDefaultValue=false)]
-        public InlineResponse200Plans NextPage { get; set; }
+        public ResourceBase NextPage { get; set; }
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
@@ -94,7 +94,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets PreviousPage
         /// </summary>
         [DataMember(Name="previousPage", EmitDefaultValue=false)]
-        public InlineResponse200Plans PreviousPage { get; set; }
+        public ResourceBase PreviousPage { get; set; }
         /// <summary>
         /// Gets or Sets TotalItems
         /// </summary>

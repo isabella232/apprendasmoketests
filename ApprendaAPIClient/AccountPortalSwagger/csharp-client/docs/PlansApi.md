@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="apiv1applicationversionsapplicationversionkeyplansget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeyPlansGet**
-> List<InlineResponse2001> ApiV1ApplicationVersionsApplicationVersionKeyPlansGet (string applicationVersionKey)
+> List<UnpagedResourceBasePlan> ApiV1ApplicationVersionsApplicationVersionKeyPlansGet (string applicationVersionKey)
 
 Get all plans for an application version
 
@@ -37,7 +37,7 @@ namespace Example
             try
             {
                 // Get all plans for an application version
-                List&lt;InlineResponse2001&gt; result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyPlansGet(applicationVersionKey);
+                List&lt;UnpagedResourceBasePlan&gt; result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyPlansGet(applicationVersionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<InlineResponse2001>**](InlineResponse2001.md)
+[**List<UnpagedResourceBasePlan>**](UnpagedResourceBasePlan.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 
 <a name="apiv1applicationversionsapplicationversionkeyplansplanidget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet**
-> Apiv1applicationVersionsapplicationVersionKeyplansItems ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet (string applicationVersionKey, string planId)
+> Plan ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet (string applicationVersionKey, string planId)
 
 Get a plan for an application version
 
@@ -100,7 +100,7 @@ namespace Example
             try
             {
                 // Get a plan for an application version
-                Apiv1applicationVersionsapplicationVersionKeyplansItems result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet(applicationVersionKey, planId);
+                Plan result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet(applicationVersionKey, planId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Apiv1applicationVersionsapplicationVersionKeyplansItems**](Apiv1applicationVersionsapplicationVersionKeyplansItems.md)
+[**Plan**](Plan.md)
 
 ### Authorization
 

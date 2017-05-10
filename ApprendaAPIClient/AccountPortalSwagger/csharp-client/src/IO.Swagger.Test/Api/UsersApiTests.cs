@@ -114,7 +114,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string roleId = null;
             //var response = instance.ApiV1RolesRoleIdUsersGet(roleId);
-            //Assert.IsInstanceOf<InlineResponse2006> (response, "response is InlineResponse2006");
+            //Assert.IsInstanceOf<UnpagedResourceBaseUser> (response, "response is UnpagedResourceBaseUser");
         }
         
         /// <summary>
@@ -152,7 +152,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
             //var response = instance.ApiV1UserRolesGet(userId);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<UnpagedResourceBaseRole> (response, "response is UnpagedResourceBaseRole");
         }
         
         /// <summary>
@@ -195,7 +195,7 @@ namespace IO.Swagger.Test
             //string sortOrder = null;
             //string correlationId = null;
             //var response = instance.ApiV1UsersGet(userId, search, pageSize, pageNumber, sortBy, sortOrder, correlationId);
-            //Assert.IsInstanceOf<InlineResponse2007> (response, "response is InlineResponse2007");
+            //Assert.IsInstanceOf<PagedResourceBaseUser> (response, "response is PagedResourceBaseUser");
         }
         
         /// <summary>
@@ -205,9 +205,9 @@ namespace IO.Swagger.Test
         public void ApiV1UsersPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //Body4 body = null;
+            //User body = null;
             //var response = instance.ApiV1UsersPost(body);
-            //Assert.IsInstanceOf<InlineResponse2004AssignedTo> (response, "response is InlineResponse2004AssignedTo");
+            //Assert.IsInstanceOf<User> (response, "response is User");
         }
         
         /// <summary>
@@ -218,9 +218,9 @@ namespace IO.Swagger.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
-            //Body3 body = null;
+            //User body = null;
             //var response = instance.ApiV1UsersPut(userId, body);
-            //Assert.IsInstanceOf<InlineResponse2004AssignedTo> (response, "response is InlineResponse2004AssignedTo");
+            //Assert.IsInstanceOf<User> (response, "response is User");
         }
         
     }

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="apiv1applicationversionsapplicationversionkeysubscriptionsget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet**
-> InlineResponse2004 ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet (string applicationVersionKey)
+> UnpagedResourceBaseSubscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet (string applicationVersionKey)
 
 Get all subscriptions of an application version
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Get all subscriptions of an application version
-                InlineResponse2004 result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet(applicationVersionKey);
+                UnpagedResourceBaseSubscription result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet(applicationVersionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**UnpagedResourceBaseSubscription**](UnpagedResourceBaseSubscription.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ No authorization required
 
 <a name="apiv1applicationversionsapplicationversionkeysubscriptionslocatorget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet**
-> InlineResponse2004Items ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet (string applicationVersionKey, string locator)
+> Subscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet (string applicationVersionKey, string locator)
 
 Get a subscription for an application version
 
@@ -297,7 +297,7 @@ namespace Example
             try
             {
                 // Get a subscription for an application version
-                InlineResponse2004Items result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet(applicationVersionKey, locator);
+                Subscription result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet(applicationVersionKey, locator);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004Items**](InlineResponse2004Items.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ No authorization required
 
 <a name="apiv1applicationversionsapplicationversionkeysubscriptionspost"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost**
-> InlineResponse2004 ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost (string applicationVersionKey, Body body = null)
+> UnpagedResourceBaseSubscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost (string applicationVersionKey, SubscriptionRequest body = null)
 
 Create a new subscription
 
@@ -356,12 +356,12 @@ namespace Example
             
             var apiInstance = new SubscriptionsApi();
             var applicationVersionKey = applicationVersionKey_example;  // string | Required. Concatenation of application alias and version alias as 'AppAlias-VersionAlias'
-            var body = new Body(); // Body | Array of plans and the number of new subscriptions to create for each plan (optional) 
+            var body = new SubscriptionRequest(); // SubscriptionRequest | Array of plans and the number of new subscriptions to create for each plan (optional) 
 
             try
             {
                 // Create a new subscription
-                InlineResponse2004 result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost(applicationVersionKey, body);
+                UnpagedResourceBaseSubscription result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost(applicationVersionKey, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -378,11 +378,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **applicationVersionKey** | **string**| Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39; | 
- **body** | [**Body**](Body.md)| Array of plans and the number of new subscriptions to create for each plan | [optional] 
+ **body** | [**SubscriptionRequest**](SubscriptionRequest.md)| Array of plans and the number of new subscriptions to create for each plan | [optional] 
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**UnpagedResourceBaseSubscription**](UnpagedResourceBaseSubscription.md)
 
 ### Authorization
 

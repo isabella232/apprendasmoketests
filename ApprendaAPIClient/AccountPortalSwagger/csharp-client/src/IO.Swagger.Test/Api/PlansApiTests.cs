@@ -73,7 +73,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string applicationVersionKey = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeyPlansGet(applicationVersionKey);
-            //Assert.IsInstanceOf<List<InlineResponse2001>> (response, "response is List<InlineResponse2001>");
+            //Assert.IsInstanceOf<List<UnpagedResourceBasePlan>> (response, "response is List<UnpagedResourceBasePlan>");
         }
         
         /// <summary>
@@ -86,7 +86,7 @@ namespace IO.Swagger.Test
             //string applicationVersionKey = null;
             //string planId = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet(applicationVersionKey, planId);
-            //Assert.IsInstanceOf<Apiv1applicationVersionsapplicationVersionKeyplansItems> (response, "response is Apiv1applicationVersionsapplicationVersionKeyplansItems");
+            //Assert.IsInstanceOf<Plan> (response, "response is Plan");
         }
         
     }

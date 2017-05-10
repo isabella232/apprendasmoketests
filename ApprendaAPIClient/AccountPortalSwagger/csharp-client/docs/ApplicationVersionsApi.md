@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="apiv1applicationversionsapplicationversionkeyget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeyGet**
-> InlineResponse200Items ApiV1ApplicationVersionsApplicationVersionKeyGet (string applicationVersionKey)
+> ApplicationVersion ApiV1ApplicationVersionsApplicationVersionKeyGet (string applicationVersionKey)
 
 Get a version of an application
 
@@ -37,7 +37,7 @@ namespace Example
             try
             {
                 // Get a version of an application
-                InlineResponse200Items result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyGet(applicationVersionKey);
+                ApplicationVersion result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyGet(applicationVersionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200Items**](InlineResponse200Items.md)
+[**ApplicationVersion**](ApplicationVersion.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 
 <a name="apiv1applicationversionsget"></a>
 # **ApiV1ApplicationVersionsGet**
-> InlineResponse200 ApiV1ApplicationVersionsGet (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
+> PagedResourceBaseApplicationVersion ApiV1ApplicationVersionsGet (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
 
 Get all applications
 
@@ -102,7 +102,7 @@ namespace Example
             try
             {
                 // Get all applications
-                InlineResponse200 result = apiInstance.ApiV1ApplicationVersionsGet(pageSize, pageNumber, sortBy, sortOrder);
+                PagedResourceBaseApplicationVersion result = apiInstance.ApiV1ApplicationVersionsGet(pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**PagedResourceBaseApplicationVersion**](PagedResourceBaseApplicationVersion.md)
 
 ### Authorization
 

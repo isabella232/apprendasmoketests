@@ -105,8 +105,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2006</returns>
-        InlineResponse2006 ApiV1RolesRoleIdUsersGet (string roleId);
+        /// <returns>UnpagedResourceBaseUser</returns>
+        UnpagedResourceBaseUser ApiV1RolesRoleIdUsersGet (string roleId);
 
         /// <summary>
         /// Get users of a role
@@ -116,8 +116,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        ApiResponse<InlineResponse2006> ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId);
+        /// <returns>ApiResponse of UnpagedResourceBaseUser</returns>
+        ApiResponse<UnpagedResourceBaseUser> ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId);
         /// <summary>
         /// Add users to a role
         /// </summary>
@@ -172,8 +172,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 ApiV1UserRolesGet (string userId);
+        /// <returns>UnpagedResourceBaseRole</returns>
+        UnpagedResourceBaseRole ApiV1UserRolesGet (string userId);
 
         /// <summary>
         /// Get the roles of a user
@@ -183,8 +183,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> ApiV1UserRolesGetWithHttpInfo (string userId);
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        ApiResponse<UnpagedResourceBaseRole> ApiV1UserRolesGetWithHttpInfo (string userId);
         /// <summary>
         /// Assign a user to a role
         /// </summary>
@@ -243,8 +243,8 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>InlineResponse2007</returns>
-        InlineResponse2007 ApiV1UsersGet (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
+        /// <returns>PagedResourceBaseUser</returns>
+        PagedResourceBaseUser ApiV1UsersGet (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
 
         /// <summary>
         /// Get all users
@@ -260,8 +260,8 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2007</returns>
-        ApiResponse<InlineResponse2007> ApiV1UsersGetWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
+        /// <returns>ApiResponse of PagedResourceBaseUser</returns>
+        ApiResponse<PagedResourceBaseUser> ApiV1UsersGetWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
         /// <summary>
         /// Add a user
         /// </summary>
@@ -270,8 +270,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>InlineResponse2004AssignedTo</returns>
-        InlineResponse2004AssignedTo ApiV1UsersPost (Body4 body = null);
+        /// <returns>User</returns>
+        User ApiV1UsersPost (User body = null);
 
         /// <summary>
         /// Add a user
@@ -281,8 +281,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004AssignedTo</returns>
-        ApiResponse<InlineResponse2004AssignedTo> ApiV1UsersPostWithHttpInfo (Body4 body = null);
+        /// <returns>ApiResponse of User</returns>
+        ApiResponse<User> ApiV1UsersPostWithHttpInfo (User body = null);
         /// <summary>
         /// Update a user
         /// </summary>
@@ -292,8 +292,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>InlineResponse2004AssignedTo</returns>
-        InlineResponse2004AssignedTo ApiV1UsersPut (string userId, Body3 body = null);
+        /// <returns>User</returns>
+        User ApiV1UsersPut (string userId, User body = null);
 
         /// <summary>
         /// Update a user
@@ -304,8 +304,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004AssignedTo</returns>
-        ApiResponse<InlineResponse2004AssignedTo> ApiV1UsersPutWithHttpInfo (string userId, Body3 body = null);
+        /// <returns>ApiResponse of User</returns>
+        ApiResponse<User> ApiV1UsersPutWithHttpInfo (string userId, User body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -389,8 +389,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        System.Threading.Tasks.Task<InlineResponse2006> ApiV1RolesRoleIdUsersGetAsync (string roleId);
+        /// <returns>Task of UnpagedResourceBaseUser</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseUser> ApiV1RolesRoleIdUsersGetAsync (string roleId);
 
         /// <summary>
         /// Get users of a role
@@ -400,8 +400,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseUser)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseUser>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId);
         /// <summary>
         /// Add users to a role
         /// </summary>
@@ -456,8 +456,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> ApiV1UserRolesGetAsync (string userId);
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1UserRolesGetAsync (string userId);
 
         /// <summary>
         /// Get the roles of a user
@@ -467,8 +467,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId);
         /// <summary>
         /// Assign a user to a role
         /// </summary>
@@ -527,8 +527,8 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>Task of InlineResponse2007</returns>
-        System.Threading.Tasks.Task<InlineResponse2007> ApiV1UsersGetAsync (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
+        /// <returns>Task of PagedResourceBaseUser</returns>
+        System.Threading.Tasks.Task<PagedResourceBaseUser> ApiV1UsersGetAsync (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
 
         /// <summary>
         /// Get all users
@@ -544,8 +544,8 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> ApiV1UsersGetAsyncWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
+        /// <returns>Task of ApiResponse (PagedResourceBaseUser)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagedResourceBaseUser>> ApiV1UsersGetAsyncWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null);
         /// <summary>
         /// Add a user
         /// </summary>
@@ -554,8 +554,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>Task of InlineResponse2004AssignedTo</returns>
-        System.Threading.Tasks.Task<InlineResponse2004AssignedTo> ApiV1UsersPostAsync (Body4 body = null);
+        /// <returns>Task of User</returns>
+        System.Threading.Tasks.Task<User> ApiV1UsersPostAsync (User body = null);
 
         /// <summary>
         /// Add a user
@@ -565,8 +565,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004AssignedTo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004AssignedTo>> ApiV1UsersPostAsyncWithHttpInfo (Body4 body = null);
+        /// <returns>Task of ApiResponse (User)</returns>
+        System.Threading.Tasks.Task<ApiResponse<User>> ApiV1UsersPostAsyncWithHttpInfo (User body = null);
         /// <summary>
         /// Update a user
         /// </summary>
@@ -576,8 +576,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of InlineResponse2004AssignedTo</returns>
-        System.Threading.Tasks.Task<InlineResponse2004AssignedTo> ApiV1UsersPutAsync (string userId, Body3 body = null);
+        /// <returns>Task of User</returns>
+        System.Threading.Tasks.Task<User> ApiV1UsersPutAsync (string userId, User body = null);
 
         /// <summary>
         /// Update a user
@@ -588,8 +588,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004AssignedTo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004AssignedTo>> ApiV1UsersPutAsyncWithHttpInfo (string userId, Body3 body = null);
+        /// <returns>Task of ApiResponse (User)</returns>
+        System.Threading.Tasks.Task<ApiResponse<User>> ApiV1UsersPutAsyncWithHttpInfo (string userId, User body = null);
         #endregion Asynchronous Operations
     }
 
@@ -1186,10 +1186,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2006</returns>
-        public InlineResponse2006 ApiV1RolesRoleIdUsersGet (string roleId)
+        /// <returns>UnpagedResourceBaseUser</returns>
+        public UnpagedResourceBaseUser ApiV1RolesRoleIdUsersGet (string roleId)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = ApiV1RolesRoleIdUsersGetWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseUser> localVarResponse = ApiV1RolesRoleIdUsersGetWithHttpInfo(roleId);
              return localVarResponse.Data;
         }
 
@@ -1198,8 +1198,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        public ApiResponse< InlineResponse2006 > ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId)
+        /// <returns>ApiResponse of UnpagedResourceBaseUser</returns>
+        public ApiResponse< UnpagedResourceBaseUser > ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -1245,9 +1245,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseUser>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (UnpagedResourceBaseUser) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseUser)));
             
         }
 
@@ -1256,10 +1256,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2006> ApiV1RolesRoleIdUsersGetAsync (string roleId)
+        /// <returns>Task of UnpagedResourceBaseUser</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseUser> ApiV1RolesRoleIdUsersGetAsync (string roleId)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = await ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseUser> localVarResponse = await ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo(roleId);
              return localVarResponse.Data;
 
         }
@@ -1269,8 +1269,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseUser)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseUser>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -1316,9 +1316,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseUser>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (UnpagedResourceBaseUser) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseUser)));
             
         }
 
@@ -1641,10 +1641,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 ApiV1UserRolesGet (string userId)
+        /// <returns>UnpagedResourceBaseRole</returns>
+        public UnpagedResourceBaseRole ApiV1UserRolesGet (string userId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = ApiV1UserRolesGetWithHttpInfo(userId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = ApiV1UserRolesGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -1653,8 +1653,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > ApiV1UserRolesGetWithHttpInfo (string userId)
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        public ApiResponse< UnpagedResourceBaseRole > ApiV1UserRolesGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1700,9 +1700,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -1711,10 +1711,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> ApiV1UserRolesGetAsync (string userId)
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1UserRolesGetAsync (string userId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await ApiV1UserRolesGetAsyncWithHttpInfo(userId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = await ApiV1UserRolesGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -1724,8 +1724,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1771,9 +1771,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -2082,10 +2082,10 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>InlineResponse2007</returns>
-        public InlineResponse2007 ApiV1UsersGet (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
+        /// <returns>PagedResourceBaseUser</returns>
+        public PagedResourceBaseUser ApiV1UsersGet (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
         {
-             ApiResponse<InlineResponse2007> localVarResponse = ApiV1UsersGetWithHttpInfo(userId, search, pageSize, pageNumber, sortBy, sortOrder, correlationId);
+             ApiResponse<PagedResourceBaseUser> localVarResponse = ApiV1UsersGetWithHttpInfo(userId, search, pageSize, pageNumber, sortBy, sortOrder, correlationId);
              return localVarResponse.Data;
         }
 
@@ -2100,8 +2100,8 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2007</returns>
-        public ApiResponse< InlineResponse2007 > ApiV1UsersGetWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
+        /// <returns>ApiResponse of PagedResourceBaseUser</returns>
+        public ApiResponse< PagedResourceBaseUser > ApiV1UsersGetWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
         {
 
             var localVarPath = "/api/v1/users";
@@ -2150,9 +2150,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2007>(localVarStatusCode,
+            return new ApiResponse<PagedResourceBaseUser>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2007) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2007)));
+                (PagedResourceBaseUser) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedResourceBaseUser)));
             
         }
 
@@ -2167,10 +2167,10 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>Task of InlineResponse2007</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2007> ApiV1UsersGetAsync (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
+        /// <returns>Task of PagedResourceBaseUser</returns>
+        public async System.Threading.Tasks.Task<PagedResourceBaseUser> ApiV1UsersGetAsync (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
         {
-             ApiResponse<InlineResponse2007> localVarResponse = await ApiV1UsersGetAsyncWithHttpInfo(userId, search, pageSize, pageNumber, sortBy, sortOrder, correlationId);
+             ApiResponse<PagedResourceBaseUser> localVarResponse = await ApiV1UsersGetAsyncWithHttpInfo(userId, search, pageSize, pageNumber, sortBy, sortOrder, correlationId);
              return localVarResponse.Data;
 
         }
@@ -2186,8 +2186,8 @@ namespace IO.Swagger.Api
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">How results should be sorted. Allowed values: ascending, descending (optional)</param>
         /// <param name="correlationId"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> ApiV1UsersGetAsyncWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
+        /// <returns>Task of ApiResponse (PagedResourceBaseUser)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagedResourceBaseUser>> ApiV1UsersGetAsyncWithHttpInfo (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
         {
 
             var localVarPath = "/api/v1/users";
@@ -2236,9 +2236,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2007>(localVarStatusCode,
+            return new ApiResponse<PagedResourceBaseUser>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2007) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2007)));
+                (PagedResourceBaseUser) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedResourceBaseUser)));
             
         }
 
@@ -2247,10 +2247,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>InlineResponse2004AssignedTo</returns>
-        public InlineResponse2004AssignedTo ApiV1UsersPost (Body4 body = null)
+        /// <returns>User</returns>
+        public User ApiV1UsersPost (User body = null)
         {
-             ApiResponse<InlineResponse2004AssignedTo> localVarResponse = ApiV1UsersPostWithHttpInfo(body);
+             ApiResponse<User> localVarResponse = ApiV1UsersPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -2259,8 +2259,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004AssignedTo</returns>
-        public ApiResponse< InlineResponse2004AssignedTo > ApiV1UsersPostWithHttpInfo (Body4 body = null)
+        /// <returns>ApiResponse of User</returns>
+        public ApiResponse< User > ApiV1UsersPostWithHttpInfo (User body = null)
         {
 
             var localVarPath = "/api/v1/users";
@@ -2311,9 +2311,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004AssignedTo>(localVarStatusCode,
+            return new ApiResponse<User>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004AssignedTo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004AssignedTo)));
+                (User) Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
             
         }
 
@@ -2322,10 +2322,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>Task of InlineResponse2004AssignedTo</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004AssignedTo> ApiV1UsersPostAsync (Body4 body = null)
+        /// <returns>Task of User</returns>
+        public async System.Threading.Tasks.Task<User> ApiV1UsersPostAsync (User body = null)
         {
-             ApiResponse<InlineResponse2004AssignedTo> localVarResponse = await ApiV1UsersPostAsyncWithHttpInfo(body);
+             ApiResponse<User> localVarResponse = await ApiV1UsersPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2335,8 +2335,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User definitions to add (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004AssignedTo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004AssignedTo>> ApiV1UsersPostAsyncWithHttpInfo (Body4 body = null)
+        /// <returns>Task of ApiResponse (User)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<User>> ApiV1UsersPostAsyncWithHttpInfo (User body = null)
         {
 
             var localVarPath = "/api/v1/users";
@@ -2387,9 +2387,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004AssignedTo>(localVarStatusCode,
+            return new ApiResponse<User>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004AssignedTo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004AssignedTo)));
+                (User) Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
             
         }
 
@@ -2399,10 +2399,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>InlineResponse2004AssignedTo</returns>
-        public InlineResponse2004AssignedTo ApiV1UsersPut (string userId, Body3 body = null)
+        /// <returns>User</returns>
+        public User ApiV1UsersPut (string userId, User body = null)
         {
-             ApiResponse<InlineResponse2004AssignedTo> localVarResponse = ApiV1UsersPutWithHttpInfo(userId, body);
+             ApiResponse<User> localVarResponse = ApiV1UsersPutWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -2412,8 +2412,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004AssignedTo</returns>
-        public ApiResponse< InlineResponse2004AssignedTo > ApiV1UsersPutWithHttpInfo (string userId, Body3 body = null)
+        /// <returns>ApiResponse of User</returns>
+        public ApiResponse< User > ApiV1UsersPutWithHttpInfo (string userId, User body = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2468,9 +2468,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004AssignedTo>(localVarStatusCode,
+            return new ApiResponse<User>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004AssignedTo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004AssignedTo)));
+                (User) Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
             
         }
 
@@ -2480,10 +2480,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of InlineResponse2004AssignedTo</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004AssignedTo> ApiV1UsersPutAsync (string userId, Body3 body = null)
+        /// <returns>Task of User</returns>
+        public async System.Threading.Tasks.Task<User> ApiV1UsersPutAsync (string userId, User body = null)
         {
-             ApiResponse<InlineResponse2004AssignedTo> localVarResponse = await ApiV1UsersPutAsyncWithHttpInfo(userId, body);
+             ApiResponse<User> localVarResponse = await ApiV1UsersPutAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -2494,8 +2494,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004AssignedTo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004AssignedTo>> ApiV1UsersPutAsyncWithHttpInfo (string userId, Body3 body = null)
+        /// <returns>Task of ApiResponse (User)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<User>> ApiV1UsersPutAsyncWithHttpInfo (string userId, User body = null)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2550,9 +2550,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004AssignedTo>(localVarStatusCode,
+            return new ApiResponse<User>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004AssignedTo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004AssignedTo)));
+                (User) Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
             
         }
 

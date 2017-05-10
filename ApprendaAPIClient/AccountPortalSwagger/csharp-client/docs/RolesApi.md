@@ -91,7 +91,7 @@ No authorization required
 
 <a name="apiv1applicationversionsapplicationversionkeysecurablessecurableidrolesget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet**
-> InlineResponse2003 ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
+> UnpagedResourceBaseRole ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
 
 Get all roles using a securable
 
@@ -119,7 +119,7 @@ namespace Example
             try
             {
                 // Get all roles using a securable
-                InlineResponse2003 result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet(applicationVersionKey, securableId);
+                UnpagedResourceBaseRole result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet(applicationVersionKey, securableId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**UnpagedResourceBaseRole**](UnpagedResourceBaseRole.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ No authorization required
 
 <a name="apiv1rolesget"></a>
 # **ApiV1RolesGet**
-> InlineResponse2003 ApiV1RolesGet ()
+> UnpagedResourceBaseRole ApiV1RolesGet ()
 
 Get all roles
 
@@ -246,7 +246,7 @@ namespace Example
             try
             {
                 // Get all roles
-                InlineResponse2003 result = apiInstance.ApiV1RolesGet();
+                UnpagedResourceBaseRole result = apiInstance.ApiV1RolesGet();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -263,7 +263,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**UnpagedResourceBaseRole**](UnpagedResourceBaseRole.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ No authorization required
 
 <a name="apiv1rolespost"></a>
 # **ApiV1RolesPost**
-> InlineResponse2003Items ApiV1RolesPost (Body1 body = null)
+> Role ApiV1RolesPost (Role body = null)
 
 Create role
 
@@ -300,12 +300,12 @@ namespace Example
         {
             
             var apiInstance = new RolesApi();
-            var body = new Body1(); // Body1 | Array of role definitions to add (optional) 
+            var body = new Role(); // Role | Array of role definitions to add (optional) 
 
             try
             {
                 // Create role
-                InlineResponse2003Items result = apiInstance.ApiV1RolesPost(body);
+                Role result = apiInstance.ApiV1RolesPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -321,11 +321,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body1**](Body1.md)| Array of role definitions to add | [optional] 
+ **body** | [**Role**](Role.md)| Array of role definitions to add | [optional] 
 
 ### Return type
 
-[**InlineResponse2003Items**](InlineResponse2003Items.md)
+[**Role**](Role.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ No authorization required
 
 <a name="apiv1rolesroleidget"></a>
 # **ApiV1RolesRoleIdGet**
-> InlineResponse2003Items ApiV1RolesRoleIdGet (string roleId)
+> Role ApiV1RolesRoleIdGet (string roleId)
 
 Get role
 
@@ -428,7 +428,7 @@ namespace Example
             try
             {
                 // Get role
-                InlineResponse2003Items result = apiInstance.ApiV1RolesRoleIdGet(roleId);
+                Role result = apiInstance.ApiV1RolesRoleIdGet(roleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003Items**](InlineResponse2003Items.md)
+[**Role**](Role.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ No authorization required
 
 <a name="apiv1rolesroleidput"></a>
 # **ApiV1RolesRoleIdPut**
-> InlineResponse2003Items ApiV1RolesRoleIdPut (string roleId, Body2 body = null)
+> Role ApiV1RolesRoleIdPut (string roleId, Role body = null)
 
 Update role
 
@@ -486,12 +486,12 @@ namespace Example
             
             var apiInstance = new RolesApi();
             var roleId = roleId_example;  // string | Required. Unique Platform assigned id of a role
-            var body = new Body2(); // Body2 | Array of role definitions to update. All fields should be passed in every request. (optional) 
+            var body = new Role(); // Role | Array of role definitions to update. All fields should be passed in every request. (optional) 
 
             try
             {
                 // Update role
-                InlineResponse2003Items result = apiInstance.ApiV1RolesRoleIdPut(roleId, body);
+                Role result = apiInstance.ApiV1RolesRoleIdPut(roleId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -508,11 +508,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleId** | **string**| Required. Unique Platform assigned id of a role | 
- **body** | [**Body2**](Body2.md)| Array of role definitions to update. All fields should be passed in every request. | [optional] 
+ **body** | [**Role**](Role.md)| Array of role definitions to update. All fields should be passed in every request. | [optional] 
 
 ### Return type
 
-[**InlineResponse2003Items**](InlineResponse2003Items.md)
+[**Role**](Role.md)
 
 ### Authorization
 
@@ -590,7 +590,7 @@ No authorization required
 
 <a name="apiv1rolesroleidrolesget"></a>
 # **ApiV1RolesRoleIdRolesGet**
-> InlineResponse2003 ApiV1RolesRoleIdRolesGet (string roleId)
+> UnpagedResourceBaseRole ApiV1RolesRoleIdRolesGet (string roleId)
 
 Get all sub-roles assigned to a role
 
@@ -617,7 +617,7 @@ namespace Example
             try
             {
                 // Get all sub-roles assigned to a role
-                InlineResponse2003 result = apiInstance.ApiV1RolesRoleIdRolesGet(roleId);
+                UnpagedResourceBaseRole result = apiInstance.ApiV1RolesRoleIdRolesGet(roleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -637,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**UnpagedResourceBaseRole**](UnpagedResourceBaseRole.md)
 
 ### Authorization
 
@@ -715,7 +715,7 @@ No authorization required
 
 <a name="apiv1rolesroleidsecurablesget"></a>
 # **ApiV1RolesRoleIdSecurablesGet**
-> InlineResponse2002 ApiV1RolesRoleIdSecurablesGet (string roleId)
+> UnpagedResourceBaseSecurable ApiV1RolesRoleIdSecurablesGet (string roleId)
 
 Get all securables for a role
 
@@ -742,7 +742,7 @@ namespace Example
             try
             {
                 // Get all securables for a role
-                InlineResponse2002 result = apiInstance.ApiV1RolesRoleIdSecurablesGet(roleId);
+                UnpagedResourceBaseSecurable result = apiInstance.ApiV1RolesRoleIdSecurablesGet(roleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**UnpagedResourceBaseSecurable**](UnpagedResourceBaseSecurable.md)
 
 ### Authorization
 
@@ -840,7 +840,7 @@ No authorization required
 
 <a name="apiv1rolesroleidusersget"></a>
 # **ApiV1RolesRoleIdUsersGet**
-> InlineResponse2006 ApiV1RolesRoleIdUsersGet (string roleId)
+> UnpagedResourceBaseUser ApiV1RolesRoleIdUsersGet (string roleId)
 
 Get users of a role
 
@@ -867,7 +867,7 @@ namespace Example
             try
             {
                 // Get users of a role
-                InlineResponse2006 result = apiInstance.ApiV1RolesRoleIdUsersGet(roleId);
+                UnpagedResourceBaseUser result = apiInstance.ApiV1RolesRoleIdUsersGet(roleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -887,7 +887,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**UnpagedResourceBaseUser**](UnpagedResourceBaseUser.md)
 
 ### Authorization
 
@@ -1028,7 +1028,7 @@ No authorization required
 
 <a name="apiv1userrolesget"></a>
 # **ApiV1UserRolesGet**
-> InlineResponse2003 ApiV1UserRolesGet (string userId)
+> UnpagedResourceBaseRole ApiV1UserRolesGet (string userId)
 
 Get the roles of a user
 
@@ -1055,7 +1055,7 @@ namespace Example
             try
             {
                 // Get the roles of a user
-                InlineResponse2003 result = apiInstance.ApiV1UserRolesGet(userId);
+                UnpagedResourceBaseRole result = apiInstance.ApiV1UserRolesGet(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1075,7 +1075,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**UnpagedResourceBaseRole**](UnpagedResourceBaseRole.md)
 
 ### Authorization
 

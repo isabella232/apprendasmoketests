@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **MiddleName** | **string** |  | [optional] 
 **Name** | **string** |  | 
 **Prefix** | **string** |  | [optional] 
-**Roles** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
-**Subscriptions** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
+**Roles** | [**ResourceBase**](ResourceBase.md) |  | [optional] 
+**Subscriptions** | [**ResourceBase**](ResourceBase.md) |  | [optional] 
 **Suffix** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

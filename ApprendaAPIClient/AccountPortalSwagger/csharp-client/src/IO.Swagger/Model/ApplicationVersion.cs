@@ -66,7 +66,7 @@ namespace IO.Swagger.Model
         /// <param name="Plans">Plans.</param>
         /// <param name="Securables">Securables.</param>
         /// <param name="Href">Href.</param>
-        public ApplicationVersion(string ProviderName = default(string), string ApplicationAlias = default(string), string ApplicationDescription = default(string), string ApplicationName = default(string), string VersionAlias = default(string), StageEnum? Stage = default(StageEnum?), InlineResponse200Plans Plans = default(InlineResponse200Plans), InlineResponse200Plans Securables = default(InlineResponse200Plans), string Href = default(string))
+        public ApplicationVersion(string ProviderName = default(string), string ApplicationAlias = default(string), string ApplicationDescription = default(string), string ApplicationName = default(string), string VersionAlias = default(string), StageEnum? Stage = default(StageEnum?), ResourceBase Plans = default(ResourceBase), ResourceBase Securables = default(ResourceBase), string Href = default(string))
         {
             this.ProviderName = ProviderName;
             this.ApplicationAlias = ApplicationAlias;
@@ -108,12 +108,12 @@ namespace IO.Swagger.Model
         /// Gets or Sets Plans
         /// </summary>
         [DataMember(Name="plans", EmitDefaultValue=false)]
-        public InlineResponse200Plans Plans { get; set; }
+        public ResourceBase Plans { get; set; }
         /// <summary>
         /// Gets or Sets Securables
         /// </summary>
         [DataMember(Name="securables", EmitDefaultValue=false)]
-        public InlineResponse200Plans Securables { get; set; }
+        public ResourceBase Securables { get; set; }
         /// <summary>
         /// Gets or Sets Href
         /// </summary>

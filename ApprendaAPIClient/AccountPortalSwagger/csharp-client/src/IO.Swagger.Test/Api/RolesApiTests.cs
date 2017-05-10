@@ -88,7 +88,7 @@ namespace IO.Swagger.Test
             //string applicationVersionKey = null;
             //string securableId = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet(applicationVersionKey, securableId);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<UnpagedResourceBaseRole> (response, "response is UnpagedResourceBaseRole");
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.ApiV1RolesGet();
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<UnpagedResourceBaseRole> (response, "response is UnpagedResourceBaseRole");
         }
         
         /// <summary>
@@ -123,9 +123,9 @@ namespace IO.Swagger.Test
         public void ApiV1RolesPostTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //Body1 body = null;
+            //Role body = null;
             //var response = instance.ApiV1RolesPost(body);
-            //Assert.IsInstanceOf<InlineResponse2003Items> (response, "response is InlineResponse2003Items");
+            //Assert.IsInstanceOf<Role> (response, "response is Role");
         }
         
         /// <summary>
@@ -149,7 +149,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string roleId = null;
             //var response = instance.ApiV1RolesRoleIdGet(roleId);
-            //Assert.IsInstanceOf<InlineResponse2003Items> (response, "response is InlineResponse2003Items");
+            //Assert.IsInstanceOf<Role> (response, "response is Role");
         }
         
         /// <summary>
@@ -160,9 +160,9 @@ namespace IO.Swagger.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleId = null;
-            //Body2 body = null;
+            //Role body = null;
             //var response = instance.ApiV1RolesRoleIdPut(roleId, body);
-            //Assert.IsInstanceOf<InlineResponse2003Items> (response, "response is InlineResponse2003Items");
+            //Assert.IsInstanceOf<Role> (response, "response is Role");
         }
         
         /// <summary>
@@ -187,7 +187,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string roleId = null;
             //var response = instance.ApiV1RolesRoleIdRolesGet(roleId);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<UnpagedResourceBaseRole> (response, "response is UnpagedResourceBaseRole");
         }
         
         /// <summary>
@@ -212,7 +212,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string roleId = null;
             //var response = instance.ApiV1RolesRoleIdSecurablesGet(roleId);
-            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
+            //Assert.IsInstanceOf<UnpagedResourceBaseSecurable> (response, "response is UnpagedResourceBaseSecurable");
         }
         
         /// <summary>
@@ -237,7 +237,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string roleId = null;
             //var response = instance.ApiV1RolesRoleIdUsersGet(roleId);
-            //Assert.IsInstanceOf<InlineResponse2006> (response, "response is InlineResponse2006");
+            //Assert.IsInstanceOf<UnpagedResourceBaseUser> (response, "response is UnpagedResourceBaseUser");
         }
         
         /// <summary>
@@ -275,7 +275,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
             //var response = instance.ApiV1UserRolesGet(userId);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<UnpagedResourceBaseRole> (response, "response is UnpagedResourceBaseRole");
         }
         
         /// <summary>

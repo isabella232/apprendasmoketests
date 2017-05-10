@@ -44,7 +44,7 @@ namespace IO.Swagger.Model
         /// <param name="Roles">Roles.</param>
         /// <param name="Securables">Securables.</param>
         /// <param name="Users">Users.</param>
-        public Role(string Id = default(string), string Description = default(string), string Href = default(string), string Name = default(string), InlineResponse200Plans Roles = default(InlineResponse200Plans), InlineResponse200Plans Securables = default(InlineResponse200Plans), InlineResponse200Plans Users = default(InlineResponse200Plans))
+        public Role(string Id = default(string), string Description = default(string), string Href = default(string), string Name = default(string), ResourceBase Roles = default(ResourceBase), ResourceBase Securables = default(ResourceBase), ResourceBase Users = default(ResourceBase))
         {
             // to ensure "Description" is required (not null)
             if (Description == null)
@@ -95,17 +95,17 @@ namespace IO.Swagger.Model
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public InlineResponse200Plans Roles { get; set; }
+        public ResourceBase Roles { get; set; }
         /// <summary>
         /// Gets or Sets Securables
         /// </summary>
         [DataMember(Name="securables", EmitDefaultValue=false)]
-        public InlineResponse200Plans Securables { get; set; }
+        public ResourceBase Securables { get; set; }
         /// <summary>
         /// Gets or Sets Users
         /// </summary>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public InlineResponse200Plans Users { get; set; }
+        public ResourceBase Users { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

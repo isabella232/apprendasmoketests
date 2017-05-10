@@ -32,8 +32,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>List&lt;InlineResponse2001&gt;</returns>
-        List<InlineResponse2001> ApiV1ApplicationVersionsApplicationVersionKeyPlansGet (string applicationVersionKey);
+        /// <returns>List&lt;UnpagedResourceBasePlan&gt;</returns>
+        List<UnpagedResourceBasePlan> ApiV1ApplicationVersionsApplicationVersionKeyPlansGet (string applicationVersionKey);
 
         /// <summary>
         /// Get all plans for an application version
@@ -43,8 +43,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
-        ApiResponse<List<InlineResponse2001>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetWithHttpInfo (string applicationVersionKey);
+        /// <returns>ApiResponse of List&lt;UnpagedResourceBasePlan&gt;</returns>
+        ApiResponse<List<UnpagedResourceBasePlan>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Get a plan for an application version
         /// </summary>
@@ -54,8 +54,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>Apiv1applicationVersionsapplicationVersionKeyplansItems</returns>
-        Apiv1applicationVersionsapplicationVersionKeyplansItems ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet (string applicationVersionKey, string planId);
+        /// <returns>Plan</returns>
+        Plan ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet (string applicationVersionKey, string planId);
 
         /// <summary>
         /// Get a plan for an application version
@@ -66,8 +66,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>ApiResponse of Apiv1applicationVersionsapplicationVersionKeyplansItems</returns>
-        ApiResponse<Apiv1applicationVersionsapplicationVersionKeyplansItems> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetWithHttpInfo (string applicationVersionKey, string planId);
+        /// <returns>ApiResponse of Plan</returns>
+        ApiResponse<Plan> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetWithHttpInfo (string applicationVersionKey, string planId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -78,8 +78,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of List&lt;InlineResponse2001&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse2001>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsync (string applicationVersionKey);
+        /// <returns>Task of List&lt;UnpagedResourceBasePlan&gt;</returns>
+        System.Threading.Tasks.Task<List<UnpagedResourceBasePlan>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsync (string applicationVersionKey);
 
         /// <summary>
         /// Get all plans for an application version
@@ -89,8 +89,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsyncWithHttpInfo (string applicationVersionKey);
+        /// <returns>Task of ApiResponse (List&lt;UnpagedResourceBasePlan&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UnpagedResourceBasePlan>>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsyncWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Get a plan for an application version
         /// </summary>
@@ -100,8 +100,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>Task of Apiv1applicationVersionsapplicationVersionKeyplansItems</returns>
-        System.Threading.Tasks.Task<Apiv1applicationVersionsapplicationVersionKeyplansItems> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsync (string applicationVersionKey, string planId);
+        /// <returns>Task of Plan</returns>
+        System.Threading.Tasks.Task<Plan> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsync (string applicationVersionKey, string planId);
 
         /// <summary>
         /// Get a plan for an application version
@@ -112,8 +112,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>Task of ApiResponse (Apiv1applicationVersionsapplicationVersionKeyplansItems)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Apiv1applicationVersionsapplicationVersionKeyplansItems>> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsyncWithHttpInfo (string applicationVersionKey, string planId);
+        /// <returns>Task of ApiResponse (Plan)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Plan>> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsyncWithHttpInfo (string applicationVersionKey, string planId);
         #endregion Asynchronous Operations
     }
 
@@ -231,10 +231,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>List&lt;InlineResponse2001&gt;</returns>
-        public List<InlineResponse2001> ApiV1ApplicationVersionsApplicationVersionKeyPlansGet (string applicationVersionKey)
+        /// <returns>List&lt;UnpagedResourceBasePlan&gt;</returns>
+        public List<UnpagedResourceBasePlan> ApiV1ApplicationVersionsApplicationVersionKeyPlansGet (string applicationVersionKey)
         {
-             ApiResponse<List<InlineResponse2001>> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeyPlansGetWithHttpInfo(applicationVersionKey);
+             ApiResponse<List<UnpagedResourceBasePlan>> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeyPlansGetWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
         }
 
@@ -243,8 +243,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
-        public ApiResponse< List<InlineResponse2001> > ApiV1ApplicationVersionsApplicationVersionKeyPlansGetWithHttpInfo (string applicationVersionKey)
+        /// <returns>ApiResponse of List&lt;UnpagedResourceBasePlan&gt;</returns>
+        public ApiResponse< List<UnpagedResourceBasePlan> > ApiV1ApplicationVersionsApplicationVersionKeyPlansGetWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -289,9 +289,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<InlineResponse2001>>(localVarStatusCode,
+            return new ApiResponse<List<UnpagedResourceBasePlan>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<InlineResponse2001>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse2001>)));
+                (List<UnpagedResourceBasePlan>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UnpagedResourceBasePlan>)));
             
         }
 
@@ -300,10 +300,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of List&lt;InlineResponse2001&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse2001>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsync (string applicationVersionKey)
+        /// <returns>Task of List&lt;UnpagedResourceBasePlan&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UnpagedResourceBasePlan>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsync (string applicationVersionKey)
         {
-             ApiResponse<List<InlineResponse2001>> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsyncWithHttpInfo(applicationVersionKey);
+             ApiResponse<List<UnpagedResourceBasePlan>> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsyncWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
 
         }
@@ -313,8 +313,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsyncWithHttpInfo (string applicationVersionKey)
+        /// <returns>Task of ApiResponse (List&lt;UnpagedResourceBasePlan&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UnpagedResourceBasePlan>>> ApiV1ApplicationVersionsApplicationVersionKeyPlansGetAsyncWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -359,9 +359,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<InlineResponse2001>>(localVarStatusCode,
+            return new ApiResponse<List<UnpagedResourceBasePlan>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<InlineResponse2001>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse2001>)));
+                (List<UnpagedResourceBasePlan>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UnpagedResourceBasePlan>)));
             
         }
 
@@ -371,10 +371,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>Apiv1applicationVersionsapplicationVersionKeyplansItems</returns>
-        public Apiv1applicationVersionsapplicationVersionKeyplansItems ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet (string applicationVersionKey, string planId)
+        /// <returns>Plan</returns>
+        public Plan ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGet (string applicationVersionKey, string planId)
         {
-             ApiResponse<Apiv1applicationVersionsapplicationVersionKeyplansItems> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetWithHttpInfo(applicationVersionKey, planId);
+             ApiResponse<Plan> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetWithHttpInfo(applicationVersionKey, planId);
              return localVarResponse.Data;
         }
 
@@ -384,8 +384,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>ApiResponse of Apiv1applicationVersionsapplicationVersionKeyplansItems</returns>
-        public ApiResponse< Apiv1applicationVersionsapplicationVersionKeyplansItems > ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetWithHttpInfo (string applicationVersionKey, string planId)
+        /// <returns>ApiResponse of Plan</returns>
+        public ApiResponse< Plan > ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetWithHttpInfo (string applicationVersionKey, string planId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -434,9 +434,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Apiv1applicationVersionsapplicationVersionKeyplansItems>(localVarStatusCode,
+            return new ApiResponse<Plan>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Apiv1applicationVersionsapplicationVersionKeyplansItems) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Apiv1applicationVersionsapplicationVersionKeyplansItems)));
+                (Plan) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Plan)));
             
         }
 
@@ -446,10 +446,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>Task of Apiv1applicationVersionsapplicationVersionKeyplansItems</returns>
-        public async System.Threading.Tasks.Task<Apiv1applicationVersionsapplicationVersionKeyplansItems> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsync (string applicationVersionKey, string planId)
+        /// <returns>Task of Plan</returns>
+        public async System.Threading.Tasks.Task<Plan> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsync (string applicationVersionKey, string planId)
         {
-             ApiResponse<Apiv1applicationVersionsapplicationVersionKeyplansItems> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsyncWithHttpInfo(applicationVersionKey, planId);
+             ApiResponse<Plan> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsyncWithHttpInfo(applicationVersionKey, planId);
              return localVarResponse.Data;
 
         }
@@ -460,8 +460,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="planId">Required. Unique Platform assigned id of the plan</param>
-        /// <returns>Task of ApiResponse (Apiv1applicationVersionsapplicationVersionKeyplansItems)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Apiv1applicationVersionsapplicationVersionKeyplansItems>> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsyncWithHttpInfo (string applicationVersionKey, string planId)
+        /// <returns>Task of ApiResponse (Plan)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Plan>> ApiV1ApplicationVersionsApplicationVersionKeyPlansPlanIdGetAsyncWithHttpInfo (string applicationVersionKey, string planId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -510,9 +510,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Apiv1applicationVersionsapplicationVersionKeyplansItems>(localVarStatusCode,
+            return new ApiResponse<Plan>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Apiv1applicationVersionsapplicationVersionKeyplansItems) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Apiv1applicationVersionsapplicationVersionKeyplansItems)));
+                (Plan) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Plan)));
             
         }
 

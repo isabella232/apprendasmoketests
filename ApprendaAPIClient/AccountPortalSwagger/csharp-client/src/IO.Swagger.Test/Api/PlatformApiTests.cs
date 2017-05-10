@@ -72,7 +72,7 @@ namespace IO.Swagger.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.ApiV1PlatformUpgradestatusGet();
-            //Assert.IsInstanceOf<InlineResponse2005> (response, "response is InlineResponse2005");
+            //Assert.IsInstanceOf<UpgradeStatus> (response, "response is UpgradeStatus");
         }
         
     }

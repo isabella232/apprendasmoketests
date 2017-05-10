@@ -75,7 +75,7 @@ namespace Example
             try
             {
                 // Get a version of an application
-                InlineResponse200Items result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyGet(applicationVersionKey);
+                ApplicationVersion result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeyGet(applicationVersionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -147,28 +147,7 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.Apiv1applicationVersionsapplicationVersionKeyplansItems](docs/Apiv1applicationVersionsapplicationVersionKeyplansItems.md)
- - [Model.Apiv1applicationVersionsapplicationVersionKeysubscriptionsPlanRequests](docs/Apiv1applicationVersionsapplicationVersionKeysubscriptionsPlanRequests.md)
  - [Model.ApplicationVersion](docs/ApplicationVersion.md)
- - [Model.Body](docs/Body.md)
- - [Model.Body1](docs/Body1.md)
- - [Model.Body2](docs/Body2.md)
- - [Model.Body3](docs/Body3.md)
- - [Model.Body4](docs/Body4.md)
- - [Model.InlineResponse200](docs/InlineResponse200.md)
- - [Model.InlineResponse2001](docs/InlineResponse2001.md)
- - [Model.InlineResponse2002](docs/InlineResponse2002.md)
- - [Model.InlineResponse2002Items](docs/InlineResponse2002Items.md)
- - [Model.InlineResponse2003](docs/InlineResponse2003.md)
- - [Model.InlineResponse2003Items](docs/InlineResponse2003Items.md)
- - [Model.InlineResponse2004](docs/InlineResponse2004.md)
- - [Model.InlineResponse2004AssignedTo](docs/InlineResponse2004AssignedTo.md)
- - [Model.InlineResponse2004Items](docs/InlineResponse2004Items.md)
- - [Model.InlineResponse2005](docs/InlineResponse2005.md)
- - [Model.InlineResponse2006](docs/InlineResponse2006.md)
- - [Model.InlineResponse2007](docs/InlineResponse2007.md)
- - [Model.InlineResponse200Items](docs/InlineResponse200Items.md)
- - [Model.InlineResponse200Plans](docs/InlineResponse200Plans.md)
  - [Model.PagedResourceBaseApplicationVersion](docs/PagedResourceBaseApplicationVersion.md)
  - [Model.PagedResourceBaseUser](docs/PagedResourceBaseUser.md)
  - [Model.Plan](docs/Plan.md)

@@ -38,7 +38,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="Subscription" /> class.
         /// </summary>
         /// <param name="Id">Id (required).</param>
-        /// <param name="AppVersion">AppVersion.</param>
+        /// <param name="AppVersion">AppVersion (required).</param>
         /// <param name="Group">Group.</param>
         /// <param name="AssignedTo">AssignedTo.</param>
         /// <param name="AutoRenew">AutoRenew (required) (default to false).</param>
@@ -50,11 +50,11 @@ namespace IO.Swagger.Model
         /// <param name="NextRenewalDate">NextRenewalDate.</param>
         /// <param name="ProviderId">ProviderId.</param>
         /// <param name="EditionName">EditionName.</param>
-        /// <param name="Plan">Plan.</param>
+        /// <param name="Plan">Plan (required).</param>
         /// <param name="Status">Status.</param>
         /// <param name="TerminationDate">TerminationDate.</param>
         /// <param name="Href">Href.</param>
-        public Subscription(string Id = default(string), InlineResponse200Plans AppVersion = default(InlineResponse200Plans), string Group = default(string), InlineResponse2004AssignedTo AssignedTo = default(InlineResponse2004AssignedTo), bool? AutoRenew = false, DateTime? CreatedDate = default(DateTime?), string Description = default(string), DateTime? LastRenewalDate = default(DateTime?), string Locator = default(string), string Label = default(string), DateTime? NextRenewalDate = default(DateTime?), string ProviderId = default(string), string EditionName = default(string), InlineResponse200Plans Plan = default(InlineResponse200Plans), string Status = default(string), DateTime? TerminationDate = default(DateTime?), string Href = default(string))
+        public Subscription(string Id = default(string), ResourceBase AppVersion = default(ResourceBase), string Group = default(string), User AssignedTo = default(User), bool? AutoRenew = false, DateTime? CreatedDate = default(DateTime?), string Description = default(string), DateTime? LastRenewalDate = default(DateTime?), string Locator = default(string), string Label = default(string), DateTime? NextRenewalDate = default(DateTime?), string ProviderId = default(string), string EditionName = default(string), ResourceBase Plan = default(ResourceBase), string Status = default(string), DateTime? TerminationDate = default(DateTime?), string Href = default(string))
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -64,6 +64,15 @@ namespace IO.Swagger.Model
             else
             {
                 this.Id = Id;
+            }
+            // to ensure "AppVersion" is required (not null)
+            if (AppVersion == null)
+            {
+                throw new InvalidDataException("AppVersion is a required property for Subscription and cannot be null");
+            }
+            else
+            {
+                this.AppVersion = AppVersion;
             }
             // to ensure "AutoRenew" is required (not null)
             if (AutoRenew == null)
@@ -83,7 +92,15 @@ namespace IO.Swagger.Model
             {
                 this.CreatedDate = CreatedDate;
             }
-            this.AppVersion = AppVersion;
+            // to ensure "Plan" is required (not null)
+            if (Plan == null)
+            {
+                throw new InvalidDataException("Plan is a required property for Subscription and cannot be null");
+            }
+            else
+            {
+                this.Plan = Plan;
+            }
             this.Group = Group;
             this.AssignedTo = AssignedTo;
             this.Description = Description;
@@ -93,7 +110,6 @@ namespace IO.Swagger.Model
             this.NextRenewalDate = NextRenewalDate;
             this.ProviderId = ProviderId;
             this.EditionName = EditionName;
-            this.Plan = Plan;
             this.Status = Status;
             this.TerminationDate = TerminationDate;
             this.Href = Href;
@@ -108,7 +124,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets AppVersion
         /// </summary>
         [DataMember(Name="appVersion", EmitDefaultValue=false)]
-        public InlineResponse200Plans AppVersion { get; set; }
+        public ResourceBase AppVersion { get; set; }
         /// <summary>
         /// Gets or Sets Group
         /// </summary>
@@ -118,7 +134,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets AssignedTo
         /// </summary>
         [DataMember(Name="assignedTo", EmitDefaultValue=false)]
-        public InlineResponse2004AssignedTo AssignedTo { get; set; }
+        public User AssignedTo { get; set; }
         /// <summary>
         /// Gets or Sets AutoRenew
         /// </summary>
@@ -168,7 +184,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Plan
         /// </summary>
         [DataMember(Name="plan", EmitDefaultValue=false)]
-        public InlineResponse200Plans Plan { get; set; }
+        public ResourceBase Plan { get; set; }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>

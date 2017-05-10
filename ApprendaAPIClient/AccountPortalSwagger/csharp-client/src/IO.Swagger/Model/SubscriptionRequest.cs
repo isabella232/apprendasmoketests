@@ -33,7 +33,7 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="SubscriptionRequest" /> class.
         /// </summary>
         /// <param name="PlanRequests">PlanRequests.</param>
-        public SubscriptionRequest(List<Apiv1applicationVersionsapplicationVersionKeysubscriptionsPlanRequests> PlanRequests = default(List<Apiv1applicationVersionsapplicationVersionKeysubscriptionsPlanRequests>))
+        public SubscriptionRequest(List<PlanRequest> PlanRequests = default(List<PlanRequest>))
         {
             this.PlanRequests = PlanRequests;
         }
@@ -42,7 +42,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets PlanRequests
         /// </summary>
         [DataMember(Name="planRequests", EmitDefaultValue=false)]
-        public List<Apiv1applicationVersionsapplicationVersionKeysubscriptionsPlanRequests> PlanRequests { get; set; }
+        public List<PlanRequest> PlanRequests { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -73,7 +73,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string applicationVersionKey = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet(applicationVersionKey);
-            //Assert.IsInstanceOf<InlineResponse2004> (response, "response is InlineResponse2004");
+            //Assert.IsInstanceOf<UnpagedResourceBaseSubscription> (response, "response is UnpagedResourceBaseSubscription");
         }
         
         /// <summary>
@@ -127,7 +127,7 @@ namespace IO.Swagger.Test
             //string applicationVersionKey = null;
             //string locator = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet(applicationVersionKey, locator);
-            //Assert.IsInstanceOf<InlineResponse2004Items> (response, "response is InlineResponse2004Items");
+            //Assert.IsInstanceOf<Subscription> (response, "response is Subscription");
         }
         
         /// <summary>
@@ -138,9 +138,9 @@ namespace IO.Swagger.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string applicationVersionKey = null;
-            //Body body = null;
+            //SubscriptionRequest body = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost(applicationVersionKey, body);
-            //Assert.IsInstanceOf<InlineResponse2004> (response, "response is InlineResponse2004");
+            //Assert.IsInstanceOf<UnpagedResourceBaseSubscription> (response, "response is UnpagedResourceBaseSubscription");
         }
         
     }

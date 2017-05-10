@@ -213,7 +213,7 @@ No authorization required
 
 <a name="apiv1rolesroleidusersget"></a>
 # **ApiV1RolesRoleIdUsersGet**
-> InlineResponse2006 ApiV1RolesRoleIdUsersGet (string roleId)
+> UnpagedResourceBaseUser ApiV1RolesRoleIdUsersGet (string roleId)
 
 Get users of a role
 
@@ -240,7 +240,7 @@ namespace Example
             try
             {
                 // Get users of a role
-                InlineResponse2006 result = apiInstance.ApiV1RolesRoleIdUsersGet(roleId);
+                UnpagedResourceBaseUser result = apiInstance.ApiV1RolesRoleIdUsersGet(roleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**UnpagedResourceBaseUser**](UnpagedResourceBaseUser.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ No authorization required
 
 <a name="apiv1userrolesget"></a>
 # **ApiV1UserRolesGet**
-> InlineResponse2003 ApiV1UserRolesGet (string userId)
+> UnpagedResourceBaseRole ApiV1UserRolesGet (string userId)
 
 Get the roles of a user
 
@@ -428,7 +428,7 @@ namespace Example
             try
             {
                 // Get the roles of a user
-                InlineResponse2003 result = apiInstance.ApiV1UserRolesGet(userId);
+                UnpagedResourceBaseRole result = apiInstance.ApiV1UserRolesGet(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**UnpagedResourceBaseRole**](UnpagedResourceBaseRole.md)
 
 ### Authorization
 
@@ -587,7 +587,7 @@ No authorization required
 
 <a name="apiv1usersget"></a>
 # **ApiV1UsersGet**
-> InlineResponse2007 ApiV1UsersGet (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
+> PagedResourceBaseUser ApiV1UsersGet (string userId = null, string search = null, string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null, string correlationId = null)
 
 Get all users
 
@@ -620,7 +620,7 @@ namespace Example
             try
             {
                 // Get all users
-                InlineResponse2007 result = apiInstance.ApiV1UsersGet(userId, search, pageSize, pageNumber, sortBy, sortOrder, correlationId);
+                PagedResourceBaseUser result = apiInstance.ApiV1UsersGet(userId, search, pageSize, pageNumber, sortBy, sortOrder, correlationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**PagedResourceBaseUser**](PagedResourceBaseUser.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ No authorization required
 
 <a name="apiv1userspost"></a>
 # **ApiV1UsersPost**
-> InlineResponse2004AssignedTo ApiV1UsersPost (Body4 body = null)
+> User ApiV1UsersPost (User body = null)
 
 Add a user
 
@@ -683,12 +683,12 @@ namespace Example
         {
             
             var apiInstance = new UsersApi();
-            var body = new Body4(); // Body4 | User definitions to add (optional) 
+            var body = new User(); // User | User definitions to add (optional) 
 
             try
             {
                 // Add a user
-                InlineResponse2004AssignedTo result = apiInstance.ApiV1UsersPost(body);
+                User result = apiInstance.ApiV1UsersPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -704,11 +704,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body4**](Body4.md)| User definitions to add | [optional] 
+ **body** | [**User**](User.md)| User definitions to add | [optional] 
 
 ### Return type
 
-[**InlineResponse2004AssignedTo**](InlineResponse2004AssignedTo.md)
+[**User**](User.md)
 
 ### Authorization
 
@@ -723,7 +723,7 @@ No authorization required
 
 <a name="apiv1usersput"></a>
 # **ApiV1UsersPut**
-> InlineResponse2004AssignedTo ApiV1UsersPut (string userId, Body3 body = null)
+> User ApiV1UsersPut (string userId, User body = null)
 
 Update a user
 
@@ -746,12 +746,12 @@ namespace Example
             
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | 
-            var body = new Body3(); // Body3 |  (optional) 
+            var body = new User(); // User |  (optional) 
 
             try
             {
                 // Update a user
-                InlineResponse2004AssignedTo result = apiInstance.ApiV1UsersPut(userId, body);
+                User result = apiInstance.ApiV1UsersPut(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -768,11 +768,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **string**|  | 
- **body** | [**Body3**](Body3.md)|  | [optional] 
+ **body** | [**User**](User.md)|  | [optional] 
 
 ### Return type
 
-[**InlineResponse2004AssignedTo**](InlineResponse2004AssignedTo.md)
+[**User**](User.md)
 
 ### Authorization
 

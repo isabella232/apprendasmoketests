@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** |  | 
-**AppVersion** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
+**AppVersion** | [**ResourceBase**](ResourceBase.md) |  | 
 **Group** | **string** |  | [optional] 
-**AssignedTo** | [**InlineResponse2004AssignedTo**](InlineResponse2004AssignedTo.md) |  | [optional] 
+**AssignedTo** | [**User**](User.md) |  | [optional] 
 **AutoRenew** | **bool?** |  | [default to false]
 **CreatedDate** | **DateTime?** |  | 
 **Description** | **string** |  | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **NextRenewalDate** | **DateTime?** |  | [optional] 
 **ProviderId** | **string** |  | [optional] 
 **EditionName** | **string** |  | [optional] 
-**Plan** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
+**Plan** | [**ResourceBase**](ResourceBase.md) |  | 
 **Status** | **string** |  | [optional] 
 **TerminationDate** | **DateTime?** |  | [optional] 
 **Href** | **string** |  | [optional] 

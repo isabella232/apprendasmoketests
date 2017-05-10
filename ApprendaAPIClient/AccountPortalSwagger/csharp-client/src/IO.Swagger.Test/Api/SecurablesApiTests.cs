@@ -73,7 +73,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string applicationVersionKey = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet(applicationVersionKey);
-            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
+            //Assert.IsInstanceOf<UnpagedResourceBaseSecurable> (response, "response is UnpagedResourceBaseSecurable");
         }
         
         /// <summary>
@@ -86,7 +86,7 @@ namespace IO.Swagger.Test
             //string applicationVersionKey = null;
             //string securableId = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet(applicationVersionKey, securableId);
-            //Assert.IsInstanceOf<InlineResponse2002Items> (response, "response is InlineResponse2002Items");
+            //Assert.IsInstanceOf<Securable> (response, "response is Securable");
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Test
             //string applicationVersionKey = null;
             //string securableId = null;
             //var response = instance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet(applicationVersionKey, securableId);
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //Assert.IsInstanceOf<UnpagedResourceBaseRole> (response, "response is UnpagedResourceBaseRole");
         }
         
         /// <summary>
@@ -139,7 +139,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string roleId = null;
             //var response = instance.ApiV1RolesRoleIdSecurablesGet(roleId);
-            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
+            //Assert.IsInstanceOf<UnpagedResourceBaseSecurable> (response, "response is UnpagedResourceBaseSecurable");
         }
         
     }

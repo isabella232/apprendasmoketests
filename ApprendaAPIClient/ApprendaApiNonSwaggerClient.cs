@@ -1,46 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using ApprendaAPIClient.Models;
-using ApprendaAPIClient.Models.AccountPortal;
 using ApprendaAPIClient.Services;
 using ApprendaAPIClient.Services.ClientHelpers;
 using ApprendaSmokeTestsBase.Services.Implementation.ClientHelpers;
-using RESTApiTests.Account.Resources;
+using IO.Swagger.Model;
+using Newtonsoft.Json;
+using Application = ApprendaAPIClient.Models.DeveloperPortal.Application;
 
 namespace ApprendaAPIClient
 {
-    public class ApprendaApiNonSwaggerClient : IApprendaApiClient
+    public class ApprendaApiNonSwaggerClient : BaseApprendaApiClient, IApprendaApiClient
     {
-        private readonly HttpClient _httpClient;
-        private readonly string _appsRoot;
-        private string _sessionToken;
+        protected string DevRoot => AppsRoot + "/developer";
+        protected string AccountRoot => AppsRoot + "/account";
+        protected string SOCRoot => AppsRoot + "/soc";
 
-        private readonly IConnectionSettings _connectionSettings;
-        private string DevRoot => _appsRoot + "/developer";
-        private string AccountRoot => _appsRoot + "/account";
-        private string SOCRoot => _appsRoot + "/soc";
-
-        public ApprendaApiNonSwaggerClient(IConnectionSettings connectionSettings, HttpClient httpClient = null)
+        public ApprendaApiNonSwaggerClient(IConnectionSettings connectionSettings)
+            : base(connectionSettings)
         {
-            _httpClient = httpClient??new HttpClient();
-            _connectionSettings = connectionSettings;
-            _appsRoot = connectionSettings.AppsUrl;
-            _sessionToken = null;
-        }
-
-        public PagedResourceBase<ApplicationVersionResource> GetAccountApplicationVersions()
-        {
-            var helper = new AccountApiHelper(_connectionSettings);
-            var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri("applicationversions", null, new { pageSize = 200, pageNumber = 1 });
-
-            //Act
-            var apps = _httpClient.Get<PagedResourceBase<ApplicationVersionResource>>();
-
-            return apps;
         }
 
         public Task PromoteApp(string appAlias)
@@ -48,24 +29,41 @@ namespace ApprendaAPIClient
             throw new NotImplementedException();
         }
 
-        public Task<string> Login(string userName, string password)
+        public async Task<IEnumerable<Application>> GetApplications()
         {
-            if (string.IsNullOrEmpty(_sessionToken))
-            {
-                var helper = new GenericApiHelper(_connectionSettings, "developer");
-                _sessionToken = helper?.Authenticator?.Login(userName, password);
-            }
+            var helper = new GenericApiHelper(ConnectionSettings, "developer");
+            var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri("apps", null, null);
 
-            return Task.FromResult(_sessionToken);
+            var client = GetClient(uri, SessionToken);
+
+            //var res = client.Get<IEnumerable<Application>>();
+            var res = await client.GetStringAsync(uri);
+
+            var deser = JsonConvert.DeserializeObject<IEnumerable<Application>>(res);
+            return deser;
         }
 
-        public Task Logout(string sessionToken)
+        private HttpClient GetClient(Uri baseAddress, string authenticationToken = null, TimeSpan? timeout = null, string mediaType = null)
         {
-            var helper = new GenericApiHelper(_connectionSettings, "developer");
-            helper?.Authenticator.Logout(_sessionToken);
-            _sessionToken = null;
+            var client = RestApiProxyBase.GetVerbMaintainingClient();
+            InitializeHttpClient(baseAddress, authenticationToken, timeout, mediaType, client);
+            return client;
+        }
 
-            return Task.FromResult(false);
+        private static void InitializeHttpClient(Uri baseAddress, string authenticationToken, TimeSpan? timeout, string mediaType, HttpClient client)
+        {
+            client.BaseAddress = baseAddress;
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(mediaType ?? "application/json"));
+
+            if (!string.IsNullOrWhiteSpace(authenticationToken))
+            {
+                client.DefaultRequestHeaders.Add(RestAuthenticator.HeaderName, authenticationToken);
+            }
+
+            if (timeout.HasValue)
+            {
+                client.Timeout = timeout.Value;
+            }
         }
     }
 }

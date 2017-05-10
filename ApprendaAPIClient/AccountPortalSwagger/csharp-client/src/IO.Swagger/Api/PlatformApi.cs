@@ -31,8 +31,8 @@ namespace IO.Swagger.Api
         /// Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2005</returns>
-        InlineResponse2005 ApiV1PlatformUpgradestatusGet ();
+        /// <returns>UpgradeStatus</returns>
+        UpgradeStatus ApiV1PlatformUpgradestatusGet ();
 
         /// <summary>
         /// Check if the Platform is upgrading
@@ -41,8 +41,8 @@ namespace IO.Swagger.Api
         /// Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        ApiResponse<InlineResponse2005> ApiV1PlatformUpgradestatusGetWithHttpInfo ();
+        /// <returns>ApiResponse of UpgradeStatus</returns>
+        ApiResponse<UpgradeStatus> ApiV1PlatformUpgradestatusGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,8 +52,8 @@ namespace IO.Swagger.Api
         /// Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2005</returns>
-        System.Threading.Tasks.Task<InlineResponse2005> ApiV1PlatformUpgradestatusGetAsync ();
+        /// <returns>Task of UpgradeStatus</returns>
+        System.Threading.Tasks.Task<UpgradeStatus> ApiV1PlatformUpgradestatusGetAsync ();
 
         /// <summary>
         /// Check if the Platform is upgrading
@@ -62,8 +62,8 @@ namespace IO.Swagger.Api
         /// Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> ApiV1PlatformUpgradestatusGetAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (UpgradeStatus)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UpgradeStatus>> ApiV1PlatformUpgradestatusGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -180,10 +180,10 @@ namespace IO.Swagger.Api
         /// Check if the Platform is upgrading Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2005</returns>
-        public InlineResponse2005 ApiV1PlatformUpgradestatusGet ()
+        /// <returns>UpgradeStatus</returns>
+        public UpgradeStatus ApiV1PlatformUpgradestatusGet ()
         {
-             ApiResponse<InlineResponse2005> localVarResponse = ApiV1PlatformUpgradestatusGetWithHttpInfo();
+             ApiResponse<UpgradeStatus> localVarResponse = ApiV1PlatformUpgradestatusGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -191,8 +191,8 @@ namespace IO.Swagger.Api
         /// Check if the Platform is upgrading Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        public ApiResponse< InlineResponse2005 > ApiV1PlatformUpgradestatusGetWithHttpInfo ()
+        /// <returns>ApiResponse of UpgradeStatus</returns>
+        public ApiResponse< UpgradeStatus > ApiV1PlatformUpgradestatusGetWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/platform/upgradestatus";
@@ -234,9 +234,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<UpgradeStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2005) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (UpgradeStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpgradeStatus)));
             
         }
 
@@ -244,10 +244,10 @@ namespace IO.Swagger.Api
         /// Check if the Platform is upgrading Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2005</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2005> ApiV1PlatformUpgradestatusGetAsync ()
+        /// <returns>Task of UpgradeStatus</returns>
+        public async System.Threading.Tasks.Task<UpgradeStatus> ApiV1PlatformUpgradestatusGetAsync ()
         {
-             ApiResponse<InlineResponse2005> localVarResponse = await ApiV1PlatformUpgradestatusGetAsyncWithHttpInfo();
+             ApiResponse<UpgradeStatus> localVarResponse = await ApiV1PlatformUpgradestatusGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -256,8 +256,8 @@ namespace IO.Swagger.Api
         /// Check if the Platform is upgrading Returns if the Platform is being upgraded or not. Certain actions are not available while your Platform is upgrading.   Read more on [Platform upgrades](/current/upgrade). 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> ApiV1PlatformUpgradestatusGetAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (UpgradeStatus)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UpgradeStatus>> ApiV1PlatformUpgradestatusGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/platform/upgradestatus";
@@ -299,9 +299,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<UpgradeStatus>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2005) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (UpgradeStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpgradeStatus)));
             
         }
 

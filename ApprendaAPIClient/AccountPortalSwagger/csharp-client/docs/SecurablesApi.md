@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="apiv1applicationversionsapplicationversionkeysecurablesget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet**
-> InlineResponse2002 ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet (string applicationVersionKey)
+> UnpagedResourceBaseSecurable ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet (string applicationVersionKey)
 
 Get all securables for an application version
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Get all securables for an application version
-                InlineResponse2002 result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet(applicationVersionKey);
+                UnpagedResourceBaseSecurable result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesGet(applicationVersionKey);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**UnpagedResourceBaseSecurable**](UnpagedResourceBaseSecurable.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 
 <a name="apiv1applicationversionsapplicationversionkeysecurablessecurableidget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet**
-> InlineResponse2002Items ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet (string applicationVersionKey, string securableId)
+> Securable ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet (string applicationVersionKey, string securableId)
 
 Get a securable for an application version
 
@@ -104,7 +104,7 @@ namespace Example
             try
             {
                 // Get a securable for an application version
-                InlineResponse2002Items result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet(applicationVersionKey, securableId);
+                Securable result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdGet(applicationVersionKey, securableId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002Items**](InlineResponse2002Items.md)
+[**Securable**](Securable.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ No authorization required
 
 <a name="apiv1applicationversionsapplicationversionkeysecurablessecurableidrolesget"></a>
 # **ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet**
-> InlineResponse2003 ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
+> UnpagedResourceBaseRole ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
 
 Get all roles using a securable
 
@@ -233,7 +233,7 @@ namespace Example
             try
             {
                 // Get all roles using a securable
-                InlineResponse2003 result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet(applicationVersionKey, securableId);
+                UnpagedResourceBaseRole result = apiInstance.ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet(applicationVersionKey, securableId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**UnpagedResourceBaseRole**](UnpagedResourceBaseRole.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ No authorization required
 
 <a name="apiv1rolesroleidsecurablesget"></a>
 # **ApiV1RolesRoleIdSecurablesGet**
-> InlineResponse2002 ApiV1RolesRoleIdSecurablesGet (string roleId)
+> UnpagedResourceBaseSecurable ApiV1RolesRoleIdSecurablesGet (string roleId)
 
 Get all securables for a role
 
@@ -361,7 +361,7 @@ namespace Example
             try
             {
                 // Get all securables for a role
-                InlineResponse2002 result = apiInstance.ApiV1RolesRoleIdSecurablesGet(roleId);
+                UnpagedResourceBaseSecurable result = apiInstance.ApiV1RolesRoleIdSecurablesGet(roleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**UnpagedResourceBaseSecurable**](UnpagedResourceBaseSecurable.md)
 
 ### Authorization
 

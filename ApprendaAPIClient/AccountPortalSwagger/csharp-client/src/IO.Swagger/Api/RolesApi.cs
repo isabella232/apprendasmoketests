@@ -58,8 +58,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId);
+        /// <returns>UnpagedResourceBaseRole</returns>
+        UnpagedResourceBaseRole ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId);
 
         /// <summary>
         /// Get all roles using a securable
@@ -70,8 +70,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId);
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        ApiResponse<UnpagedResourceBaseRole> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId);
         /// <summary>
         /// Assign role(s) to a securable
         /// </summary>
@@ -104,8 +104,8 @@ namespace IO.Swagger.Api
         /// Returns all roles for your Tenant Account or Development Team.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 ApiV1RolesGet ();
+        /// <returns>UnpagedResourceBaseRole</returns>
+        UnpagedResourceBaseRole ApiV1RolesGet ();
 
         /// <summary>
         /// Get all roles
@@ -114,8 +114,8 @@ namespace IO.Swagger.Api
         /// Returns all roles for your Tenant Account or Development Team.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> ApiV1RolesGetWithHttpInfo ();
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        ApiResponse<UnpagedResourceBaseRole> ApiV1RolesGetWithHttpInfo ();
         /// <summary>
         /// Create role
         /// </summary>
@@ -124,8 +124,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>InlineResponse2003Items</returns>
-        InlineResponse2003Items ApiV1RolesPost (Body1 body = null);
+        /// <returns>Role</returns>
+        Role ApiV1RolesPost (Role body = null);
 
         /// <summary>
         /// Create role
@@ -135,8 +135,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2003Items</returns>
-        ApiResponse<InlineResponse2003Items> ApiV1RolesPostWithHttpInfo (Body1 body = null);
+        /// <returns>ApiResponse of Role</returns>
+        ApiResponse<Role> ApiV1RolesPostWithHttpInfo (Role body = null);
         /// <summary>
         /// Remove role
         /// </summary>
@@ -166,8 +166,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2003Items</returns>
-        InlineResponse2003Items ApiV1RolesRoleIdGet (string roleId);
+        /// <returns>Role</returns>
+        Role ApiV1RolesRoleIdGet (string roleId);
 
         /// <summary>
         /// Get role
@@ -177,8 +177,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2003Items</returns>
-        ApiResponse<InlineResponse2003Items> ApiV1RolesRoleIdGetWithHttpInfo (string roleId);
+        /// <returns>ApiResponse of Role</returns>
+        ApiResponse<Role> ApiV1RolesRoleIdGetWithHttpInfo (string roleId);
         /// <summary>
         /// Update role
         /// </summary>
@@ -188,8 +188,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>InlineResponse2003Items</returns>
-        InlineResponse2003Items ApiV1RolesRoleIdPut (string roleId, Body2 body = null);
+        /// <returns>Role</returns>
+        Role ApiV1RolesRoleIdPut (string roleId, Role body = null);
 
         /// <summary>
         /// Update role
@@ -200,8 +200,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2003Items</returns>
-        ApiResponse<InlineResponse2003Items> ApiV1RolesRoleIdPutWithHttpInfo (string roleId, Body2 body = null);
+        /// <returns>ApiResponse of Role</returns>
+        ApiResponse<Role> ApiV1RolesRoleIdPutWithHttpInfo (string roleId, Role body = null);
         /// <summary>
         /// Remove a sub-role from a role
         /// </summary>
@@ -233,8 +233,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 ApiV1RolesRoleIdRolesGet (string roleId);
+        /// <returns>UnpagedResourceBaseRole</returns>
+        UnpagedResourceBaseRole ApiV1RolesRoleIdRolesGet (string roleId);
 
         /// <summary>
         /// Get all sub-roles assigned to a role
@@ -244,8 +244,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> ApiV1RolesRoleIdRolesGetWithHttpInfo (string roleId);
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        ApiResponse<UnpagedResourceBaseRole> ApiV1RolesRoleIdRolesGetWithHttpInfo (string roleId);
         /// <summary>
         /// Make role a sub-role of another role
         /// </summary>
@@ -277,8 +277,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 ApiV1RolesRoleIdSecurablesGet (string roleId);
+        /// <returns>UnpagedResourceBaseSecurable</returns>
+        UnpagedResourceBaseSecurable ApiV1RolesRoleIdSecurablesGet (string roleId);
 
         /// <summary>
         /// Get all securables for a role
@@ -288,8 +288,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId);
+        /// <returns>ApiResponse of UnpagedResourceBaseSecurable</returns>
+        ApiResponse<UnpagedResourceBaseSecurable> ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId);
         /// <summary>
         /// Remove a user from role
         /// </summary>
@@ -321,8 +321,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2006</returns>
-        InlineResponse2006 ApiV1RolesRoleIdUsersGet (string roleId);
+        /// <returns>UnpagedResourceBaseUser</returns>
+        UnpagedResourceBaseUser ApiV1RolesRoleIdUsersGet (string roleId);
 
         /// <summary>
         /// Get users of a role
@@ -332,8 +332,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        ApiResponse<InlineResponse2006> ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId);
+        /// <returns>ApiResponse of UnpagedResourceBaseUser</returns>
+        ApiResponse<UnpagedResourceBaseUser> ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId);
         /// <summary>
         /// Add users to a role
         /// </summary>
@@ -388,8 +388,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 ApiV1UserRolesGet (string userId);
+        /// <returns>UnpagedResourceBaseRole</returns>
+        UnpagedResourceBaseRole ApiV1UserRolesGet (string userId);
 
         /// <summary>
         /// Get the roles of a user
@@ -399,8 +399,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> ApiV1UserRolesGetWithHttpInfo (string userId);
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        ApiResponse<UnpagedResourceBaseRole> ApiV1UserRolesGetWithHttpInfo (string userId);
         /// <summary>
         /// Assign a user to a role
         /// </summary>
@@ -460,8 +460,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId);
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId);
 
         /// <summary>
         /// Get all roles using a securable
@@ -472,8 +472,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId);
         /// <summary>
         /// Assign role(s) to a securable
         /// </summary>
@@ -506,8 +506,8 @@ namespace IO.Swagger.Api
         /// Returns all roles for your Tenant Account or Development Team.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> ApiV1RolesGetAsync ();
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1RolesGetAsync ();
 
         /// <summary>
         /// Get all roles
@@ -516,8 +516,8 @@ namespace IO.Swagger.Api
         /// Returns all roles for your Tenant Account or Development Team.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1RolesGetAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1RolesGetAsyncWithHttpInfo ();
         /// <summary>
         /// Create role
         /// </summary>
@@ -526,8 +526,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>Task of InlineResponse2003Items</returns>
-        System.Threading.Tasks.Task<InlineResponse2003Items> ApiV1RolesPostAsync (Body1 body = null);
+        /// <returns>Task of Role</returns>
+        System.Threading.Tasks.Task<Role> ApiV1RolesPostAsync (Role body = null);
 
         /// <summary>
         /// Create role
@@ -537,8 +537,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003Items)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003Items>> ApiV1RolesPostAsyncWithHttpInfo (Body1 body = null);
+        /// <returns>Task of ApiResponse (Role)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Role>> ApiV1RolesPostAsyncWithHttpInfo (Role body = null);
         /// <summary>
         /// Remove role
         /// </summary>
@@ -568,8 +568,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2003Items</returns>
-        System.Threading.Tasks.Task<InlineResponse2003Items> ApiV1RolesRoleIdGetAsync (string roleId);
+        /// <returns>Task of Role</returns>
+        System.Threading.Tasks.Task<Role> ApiV1RolesRoleIdGetAsync (string roleId);
 
         /// <summary>
         /// Get role
@@ -579,8 +579,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003Items)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003Items>> ApiV1RolesRoleIdGetAsyncWithHttpInfo (string roleId);
+        /// <returns>Task of ApiResponse (Role)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Role>> ApiV1RolesRoleIdGetAsyncWithHttpInfo (string roleId);
         /// <summary>
         /// Update role
         /// </summary>
@@ -590,8 +590,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>Task of InlineResponse2003Items</returns>
-        System.Threading.Tasks.Task<InlineResponse2003Items> ApiV1RolesRoleIdPutAsync (string roleId, Body2 body = null);
+        /// <returns>Task of Role</returns>
+        System.Threading.Tasks.Task<Role> ApiV1RolesRoleIdPutAsync (string roleId, Role body = null);
 
         /// <summary>
         /// Update role
@@ -602,8 +602,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003Items)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003Items>> ApiV1RolesRoleIdPutAsyncWithHttpInfo (string roleId, Body2 body = null);
+        /// <returns>Task of ApiResponse (Role)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Role>> ApiV1RolesRoleIdPutAsyncWithHttpInfo (string roleId, Role body = null);
         /// <summary>
         /// Remove a sub-role from a role
         /// </summary>
@@ -635,8 +635,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> ApiV1RolesRoleIdRolesGetAsync (string roleId);
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1RolesRoleIdRolesGetAsync (string roleId);
 
         /// <summary>
         /// Get all sub-roles assigned to a role
@@ -646,8 +646,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1RolesRoleIdRolesGetAsyncWithHttpInfo (string roleId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1RolesRoleIdRolesGetAsyncWithHttpInfo (string roleId);
         /// <summary>
         /// Make role a sub-role of another role
         /// </summary>
@@ -679,8 +679,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> ApiV1RolesRoleIdSecurablesGetAsync (string roleId);
+        /// <returns>Task of UnpagedResourceBaseSecurable</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseSecurable> ApiV1RolesRoleIdSecurablesGetAsync (string roleId);
 
         /// <summary>
         /// Get all securables for a role
@@ -690,8 +690,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSecurable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSecurable>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId);
         /// <summary>
         /// Remove a user from role
         /// </summary>
@@ -723,8 +723,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        System.Threading.Tasks.Task<InlineResponse2006> ApiV1RolesRoleIdUsersGetAsync (string roleId);
+        /// <returns>Task of UnpagedResourceBaseUser</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseUser> ApiV1RolesRoleIdUsersGetAsync (string roleId);
 
         /// <summary>
         /// Get users of a role
@@ -734,8 +734,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseUser)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseUser>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId);
         /// <summary>
         /// Add users to a role
         /// </summary>
@@ -790,8 +790,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> ApiV1UserRolesGetAsync (string userId);
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1UserRolesGetAsync (string userId);
 
         /// <summary>
         /// Get the roles of a user
@@ -801,8 +801,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId);
         /// <summary>
         /// Assign a user to a role
         /// </summary>
@@ -1113,10 +1113,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
+        /// <returns>UnpagedResourceBaseRole</returns>
+        public UnpagedResourceBaseRole ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGet (string applicationVersionKey, string securableId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo(applicationVersionKey, securableId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo(applicationVersionKey, securableId);
              return localVarResponse.Data;
         }
 
@@ -1126,8 +1126,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId)
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        public ApiResponse< UnpagedResourceBaseRole > ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetWithHttpInfo (string applicationVersionKey, string securableId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -1177,9 +1177,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -1189,10 +1189,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId)
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsync (string applicationVersionKey, string securableId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo(applicationVersionKey, securableId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo(applicationVersionKey, securableId);
              return localVarResponse.Data;
 
         }
@@ -1203,8 +1203,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="securableId">Required. Unique Platform assigned id of a securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1ApplicationVersionsApplicationVersionKeySecurablesSecurableIdRolesGetAsyncWithHttpInfo (string applicationVersionKey, string securableId)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -1254,9 +1254,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -1435,10 +1435,10 @@ namespace IO.Swagger.Api
         /// Get all roles Returns all roles for your Tenant Account or Development Team.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 ApiV1RolesGet ()
+        /// <returns>UnpagedResourceBaseRole</returns>
+        public UnpagedResourceBaseRole ApiV1RolesGet ()
         {
-             ApiResponse<InlineResponse2003> localVarResponse = ApiV1RolesGetWithHttpInfo();
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = ApiV1RolesGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1446,8 +1446,8 @@ namespace IO.Swagger.Api
         /// Get all roles Returns all roles for your Tenant Account or Development Team.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > ApiV1RolesGetWithHttpInfo ()
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        public ApiResponse< UnpagedResourceBaseRole > ApiV1RolesGetWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/roles";
@@ -1489,9 +1489,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -1499,10 +1499,10 @@ namespace IO.Swagger.Api
         /// Get all roles Returns all roles for your Tenant Account or Development Team.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> ApiV1RolesGetAsync ()
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1RolesGetAsync ()
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await ApiV1RolesGetAsyncWithHttpInfo();
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = await ApiV1RolesGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1511,8 +1511,8 @@ namespace IO.Swagger.Api
         /// Get all roles Returns all roles for your Tenant Account or Development Team.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1RolesGetAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1RolesGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v1/roles";
@@ -1554,9 +1554,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -1565,10 +1565,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>InlineResponse2003Items</returns>
-        public InlineResponse2003Items ApiV1RolesPost (Body1 body = null)
+        /// <returns>Role</returns>
+        public Role ApiV1RolesPost (Role body = null)
         {
-             ApiResponse<InlineResponse2003Items> localVarResponse = ApiV1RolesPostWithHttpInfo(body);
+             ApiResponse<Role> localVarResponse = ApiV1RolesPostWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -1577,8 +1577,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2003Items</returns>
-        public ApiResponse< InlineResponse2003Items > ApiV1RolesPostWithHttpInfo (Body1 body = null)
+        /// <returns>ApiResponse of Role</returns>
+        public ApiResponse< Role > ApiV1RolesPostWithHttpInfo (Role body = null)
         {
 
             var localVarPath = "/api/v1/roles";
@@ -1629,9 +1629,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003Items>(localVarStatusCode,
+            return new ApiResponse<Role>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003Items)));
+                (Role) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Role)));
             
         }
 
@@ -1640,10 +1640,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>Task of InlineResponse2003Items</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003Items> ApiV1RolesPostAsync (Body1 body = null)
+        /// <returns>Task of Role</returns>
+        public async System.Threading.Tasks.Task<Role> ApiV1RolesPostAsync (Role body = null)
         {
-             ApiResponse<InlineResponse2003Items> localVarResponse = await ApiV1RolesPostAsyncWithHttpInfo(body);
+             ApiResponse<Role> localVarResponse = await ApiV1RolesPostAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1653,8 +1653,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Array of role definitions to add (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003Items)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003Items>> ApiV1RolesPostAsyncWithHttpInfo (Body1 body = null)
+        /// <returns>Task of ApiResponse (Role)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Role>> ApiV1RolesPostAsyncWithHttpInfo (Role body = null)
         {
 
             var localVarPath = "/api/v1/roles";
@@ -1705,9 +1705,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003Items>(localVarStatusCode,
+            return new ApiResponse<Role>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003Items)));
+                (Role) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Role)));
             
         }
 
@@ -1853,10 +1853,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2003Items</returns>
-        public InlineResponse2003Items ApiV1RolesRoleIdGet (string roleId)
+        /// <returns>Role</returns>
+        public Role ApiV1RolesRoleIdGet (string roleId)
         {
-             ApiResponse<InlineResponse2003Items> localVarResponse = ApiV1RolesRoleIdGetWithHttpInfo(roleId);
+             ApiResponse<Role> localVarResponse = ApiV1RolesRoleIdGetWithHttpInfo(roleId);
              return localVarResponse.Data;
         }
 
@@ -1865,8 +1865,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2003Items</returns>
-        public ApiResponse< InlineResponse2003Items > ApiV1RolesRoleIdGetWithHttpInfo (string roleId)
+        /// <returns>ApiResponse of Role</returns>
+        public ApiResponse< Role > ApiV1RolesRoleIdGetWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -1912,9 +1912,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003Items>(localVarStatusCode,
+            return new ApiResponse<Role>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003Items)));
+                (Role) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Role)));
             
         }
 
@@ -1923,10 +1923,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2003Items</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003Items> ApiV1RolesRoleIdGetAsync (string roleId)
+        /// <returns>Task of Role</returns>
+        public async System.Threading.Tasks.Task<Role> ApiV1RolesRoleIdGetAsync (string roleId)
         {
-             ApiResponse<InlineResponse2003Items> localVarResponse = await ApiV1RolesRoleIdGetAsyncWithHttpInfo(roleId);
+             ApiResponse<Role> localVarResponse = await ApiV1RolesRoleIdGetAsyncWithHttpInfo(roleId);
              return localVarResponse.Data;
 
         }
@@ -1936,8 +1936,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003Items)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003Items>> ApiV1RolesRoleIdGetAsyncWithHttpInfo (string roleId)
+        /// <returns>Task of ApiResponse (Role)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Role>> ApiV1RolesRoleIdGetAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -1983,9 +1983,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003Items>(localVarStatusCode,
+            return new ApiResponse<Role>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003Items)));
+                (Role) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Role)));
             
         }
 
@@ -1995,10 +1995,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>InlineResponse2003Items</returns>
-        public InlineResponse2003Items ApiV1RolesRoleIdPut (string roleId, Body2 body = null)
+        /// <returns>Role</returns>
+        public Role ApiV1RolesRoleIdPut (string roleId, Role body = null)
         {
-             ApiResponse<InlineResponse2003Items> localVarResponse = ApiV1RolesRoleIdPutWithHttpInfo(roleId, body);
+             ApiResponse<Role> localVarResponse = ApiV1RolesRoleIdPutWithHttpInfo(roleId, body);
              return localVarResponse.Data;
         }
 
@@ -2008,8 +2008,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2003Items</returns>
-        public ApiResponse< InlineResponse2003Items > ApiV1RolesRoleIdPutWithHttpInfo (string roleId, Body2 body = null)
+        /// <returns>ApiResponse of Role</returns>
+        public ApiResponse< Role > ApiV1RolesRoleIdPutWithHttpInfo (string roleId, Role body = null)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -2064,9 +2064,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003Items>(localVarStatusCode,
+            return new ApiResponse<Role>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003Items)));
+                (Role) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Role)));
             
         }
 
@@ -2076,10 +2076,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>Task of InlineResponse2003Items</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003Items> ApiV1RolesRoleIdPutAsync (string roleId, Body2 body = null)
+        /// <returns>Task of Role</returns>
+        public async System.Threading.Tasks.Task<Role> ApiV1RolesRoleIdPutAsync (string roleId, Role body = null)
         {
-             ApiResponse<InlineResponse2003Items> localVarResponse = await ApiV1RolesRoleIdPutAsyncWithHttpInfo(roleId, body);
+             ApiResponse<Role> localVarResponse = await ApiV1RolesRoleIdPutAsyncWithHttpInfo(roleId, body);
              return localVarResponse.Data;
 
         }
@@ -2090,8 +2090,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
         /// <param name="body">Array of role definitions to update. All fields should be passed in every request. (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003Items)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003Items>> ApiV1RolesRoleIdPutAsyncWithHttpInfo (string roleId, Body2 body = null)
+        /// <returns>Task of ApiResponse (Role)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Role>> ApiV1RolesRoleIdPutAsyncWithHttpInfo (string roleId, Role body = null)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -2146,9 +2146,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003Items>(localVarStatusCode,
+            return new ApiResponse<Role>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003Items)));
+                (Role) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Role)));
             
         }
 
@@ -2314,10 +2314,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 ApiV1RolesRoleIdRolesGet (string roleId)
+        /// <returns>UnpagedResourceBaseRole</returns>
+        public UnpagedResourceBaseRole ApiV1RolesRoleIdRolesGet (string roleId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = ApiV1RolesRoleIdRolesGetWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = ApiV1RolesRoleIdRolesGetWithHttpInfo(roleId);
              return localVarResponse.Data;
         }
 
@@ -2326,8 +2326,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > ApiV1RolesRoleIdRolesGetWithHttpInfo (string roleId)
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        public ApiResponse< UnpagedResourceBaseRole > ApiV1RolesRoleIdRolesGetWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -2373,9 +2373,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -2384,10 +2384,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> ApiV1RolesRoleIdRolesGetAsync (string roleId)
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1RolesRoleIdRolesGetAsync (string roleId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await ApiV1RolesRoleIdRolesGetAsyncWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = await ApiV1RolesRoleIdRolesGetAsyncWithHttpInfo(roleId);
              return localVarResponse.Data;
 
         }
@@ -2397,8 +2397,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1RolesRoleIdRolesGetAsyncWithHttpInfo (string roleId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1RolesRoleIdRolesGetAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -2444,9 +2444,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -2612,10 +2612,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 ApiV1RolesRoleIdSecurablesGet (string roleId)
+        /// <returns>UnpagedResourceBaseSecurable</returns>
+        public UnpagedResourceBaseSecurable ApiV1RolesRoleIdSecurablesGet (string roleId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = ApiV1RolesRoleIdSecurablesGetWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseSecurable> localVarResponse = ApiV1RolesRoleIdSecurablesGetWithHttpInfo(roleId);
              return localVarResponse.Data;
         }
 
@@ -2624,8 +2624,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId)
+        /// <returns>ApiResponse of UnpagedResourceBaseSecurable</returns>
+        public ApiResponse< UnpagedResourceBaseSecurable > ApiV1RolesRoleIdSecurablesGetWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -2671,9 +2671,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSecurable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (UnpagedResourceBaseSecurable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSecurable)));
             
         }
 
@@ -2682,10 +2682,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> ApiV1RolesRoleIdSecurablesGetAsync (string roleId)
+        /// <returns>Task of UnpagedResourceBaseSecurable</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseSecurable> ApiV1RolesRoleIdSecurablesGetAsync (string roleId)
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseSecurable> localVarResponse = await ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo(roleId);
              return localVarResponse.Data;
 
         }
@@ -2695,8 +2695,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSecurable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSecurable>> ApiV1RolesRoleIdSecurablesGetAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -2742,9 +2742,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSecurable>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (UnpagedResourceBaseSecurable) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSecurable)));
             
         }
 
@@ -2910,10 +2910,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>InlineResponse2006</returns>
-        public InlineResponse2006 ApiV1RolesRoleIdUsersGet (string roleId)
+        /// <returns>UnpagedResourceBaseUser</returns>
+        public UnpagedResourceBaseUser ApiV1RolesRoleIdUsersGet (string roleId)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = ApiV1RolesRoleIdUsersGetWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseUser> localVarResponse = ApiV1RolesRoleIdUsersGetWithHttpInfo(roleId);
              return localVarResponse.Data;
         }
 
@@ -2922,8 +2922,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        public ApiResponse< InlineResponse2006 > ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId)
+        /// <returns>ApiResponse of UnpagedResourceBaseUser</returns>
+        public ApiResponse< UnpagedResourceBaseUser > ApiV1RolesRoleIdUsersGetWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -2969,9 +2969,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseUser>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (UnpagedResourceBaseUser) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseUser)));
             
         }
 
@@ -2980,10 +2980,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of InlineResponse2006</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2006> ApiV1RolesRoleIdUsersGetAsync (string roleId)
+        /// <returns>Task of UnpagedResourceBaseUser</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseUser> ApiV1RolesRoleIdUsersGetAsync (string roleId)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = await ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo(roleId);
+             ApiResponse<UnpagedResourceBaseUser> localVarResponse = await ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo(roleId);
              return localVarResponse.Data;
 
         }
@@ -2993,8 +2993,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Required. Unique Platform assigned id of a role</param>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseUser)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseUser>> ApiV1RolesRoleIdUsersGetAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -3040,9 +3040,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseUser>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (UnpagedResourceBaseUser) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseUser)));
             
         }
 
@@ -3365,10 +3365,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 ApiV1UserRolesGet (string userId)
+        /// <returns>UnpagedResourceBaseRole</returns>
+        public UnpagedResourceBaseRole ApiV1UserRolesGet (string userId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = ApiV1UserRolesGetWithHttpInfo(userId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = ApiV1UserRolesGetWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -3377,8 +3377,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > ApiV1UserRolesGetWithHttpInfo (string userId)
+        /// <returns>ApiResponse of UnpagedResourceBaseRole</returns>
+        public ApiResponse< UnpagedResourceBaseRole > ApiV1UserRolesGetWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3424,9 +3424,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 
@@ -3435,10 +3435,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> ApiV1UserRolesGetAsync (string userId)
+        /// <returns>Task of UnpagedResourceBaseRole</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseRole> ApiV1UserRolesGetAsync (string userId)
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await ApiV1UserRolesGetAsyncWithHttpInfo(userId);
+             ApiResponse<UnpagedResourceBaseRole> localVarResponse = await ApiV1UserRolesGetAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -3448,8 +3448,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">Required. Unique id of the user</param>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseRole)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseRole>> ApiV1UserRolesGetAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3495,9 +3495,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseRole>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (UnpagedResourceBaseRole) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseRole)));
             
         }
 

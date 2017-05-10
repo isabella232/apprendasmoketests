@@ -32,8 +32,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>InlineResponse200Items</returns>
-        InlineResponse200Items ApiV1ApplicationVersionsApplicationVersionKeyGet (string applicationVersionKey);
+        /// <returns>ApplicationVersion</returns>
+        ApplicationVersion ApiV1ApplicationVersionsApplicationVersionKeyGet (string applicationVersionKey);
 
         /// <summary>
         /// Get a version of an application
@@ -43,8 +43,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of InlineResponse200Items</returns>
-        ApiResponse<InlineResponse200Items> ApiV1ApplicationVersionsApplicationVersionKeyGetWithHttpInfo (string applicationVersionKey);
+        /// <returns>ApiResponse of ApplicationVersion</returns>
+        ApiResponse<ApplicationVersion> ApiV1ApplicationVersionsApplicationVersionKeyGetWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Get all applications
         /// </summary>
@@ -56,8 +56,8 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        InlineResponse200 ApiV1ApplicationVersionsGet (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
+        /// <returns>PagedResourceBaseApplicationVersion</returns>
+        PagedResourceBaseApplicationVersion ApiV1ApplicationVersionsGet (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get all applications
@@ -70,8 +70,8 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> ApiV1ApplicationVersionsGetWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
+        /// <returns>ApiResponse of PagedResourceBaseApplicationVersion</returns>
+        ApiResponse<PagedResourceBaseApplicationVersion> ApiV1ApplicationVersionsGetWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -82,8 +82,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of InlineResponse200Items</returns>
-        System.Threading.Tasks.Task<InlineResponse200Items> ApiV1ApplicationVersionsApplicationVersionKeyGetAsync (string applicationVersionKey);
+        /// <returns>Task of ApplicationVersion</returns>
+        System.Threading.Tasks.Task<ApplicationVersion> ApiV1ApplicationVersionsApplicationVersionKeyGetAsync (string applicationVersionKey);
 
         /// <summary>
         /// Get a version of an application
@@ -93,8 +93,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (InlineResponse200Items)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200Items>> ApiV1ApplicationVersionsApplicationVersionKeyGetAsyncWithHttpInfo (string applicationVersionKey);
+        /// <returns>Task of ApiResponse (ApplicationVersion)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApplicationVersion>> ApiV1ApplicationVersionsApplicationVersionKeyGetAsyncWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Get all applications
         /// </summary>
@@ -106,8 +106,8 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> ApiV1ApplicationVersionsGetAsync (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
+        /// <returns>Task of PagedResourceBaseApplicationVersion</returns>
+        System.Threading.Tasks.Task<PagedResourceBaseApplicationVersion> ApiV1ApplicationVersionsGetAsync (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get all applications
@@ -120,8 +120,8 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ApiV1ApplicationVersionsGetAsyncWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
+        /// <returns>Task of ApiResponse (PagedResourceBaseApplicationVersion)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagedResourceBaseApplicationVersion>> ApiV1ApplicationVersionsGetAsyncWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null);
         #endregion Asynchronous Operations
     }
 
@@ -239,10 +239,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>InlineResponse200Items</returns>
-        public InlineResponse200Items ApiV1ApplicationVersionsApplicationVersionKeyGet (string applicationVersionKey)
+        /// <returns>ApplicationVersion</returns>
+        public ApplicationVersion ApiV1ApplicationVersionsApplicationVersionKeyGet (string applicationVersionKey)
         {
-             ApiResponse<InlineResponse200Items> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeyGetWithHttpInfo(applicationVersionKey);
+             ApiResponse<ApplicationVersion> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeyGetWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
         }
 
@@ -251,8 +251,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of InlineResponse200Items</returns>
-        public ApiResponse< InlineResponse200Items > ApiV1ApplicationVersionsApplicationVersionKeyGetWithHttpInfo (string applicationVersionKey)
+        /// <returns>ApiResponse of ApplicationVersion</returns>
+        public ApiResponse< ApplicationVersion > ApiV1ApplicationVersionsApplicationVersionKeyGetWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -298,9 +298,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200Items>(localVarStatusCode,
+            return new ApiResponse<ApplicationVersion>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200Items)));
+                (ApplicationVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApplicationVersion)));
             
         }
 
@@ -309,10 +309,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of InlineResponse200Items</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200Items> ApiV1ApplicationVersionsApplicationVersionKeyGetAsync (string applicationVersionKey)
+        /// <returns>Task of ApplicationVersion</returns>
+        public async System.Threading.Tasks.Task<ApplicationVersion> ApiV1ApplicationVersionsApplicationVersionKeyGetAsync (string applicationVersionKey)
         {
-             ApiResponse<InlineResponse200Items> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeyGetAsyncWithHttpInfo(applicationVersionKey);
+             ApiResponse<ApplicationVersion> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeyGetAsyncWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
 
         }
@@ -322,8 +322,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (InlineResponse200Items)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200Items>> ApiV1ApplicationVersionsApplicationVersionKeyGetAsyncWithHttpInfo (string applicationVersionKey)
+        /// <returns>Task of ApiResponse (ApplicationVersion)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApplicationVersion>> ApiV1ApplicationVersionsApplicationVersionKeyGetAsyncWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -369,9 +369,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200Items>(localVarStatusCode,
+            return new ApiResponse<ApplicationVersion>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200Items)));
+                (ApplicationVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApplicationVersion)));
             
         }
 
@@ -383,10 +383,10 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>InlineResponse200</returns>
-        public InlineResponse200 ApiV1ApplicationVersionsGet (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <returns>PagedResourceBaseApplicationVersion</returns>
+        public PagedResourceBaseApplicationVersion ApiV1ApplicationVersionsGet (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = ApiV1ApplicationVersionsGetWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<PagedResourceBaseApplicationVersion> localVarResponse = ApiV1ApplicationVersionsGetWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -398,8 +398,8 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > ApiV1ApplicationVersionsGetWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <returns>ApiResponse of PagedResourceBaseApplicationVersion</returns>
+        public ApiResponse< PagedResourceBaseApplicationVersion > ApiV1ApplicationVersionsGetWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
         {
 
             var localVarPath = "/api/v1/applicationVersions";
@@ -445,9 +445,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<PagedResourceBaseApplicationVersion>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (PagedResourceBaseApplicationVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedResourceBaseApplicationVersion)));
             
         }
 
@@ -459,10 +459,10 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> ApiV1ApplicationVersionsGetAsync (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <returns>Task of PagedResourceBaseApplicationVersion</returns>
+        public async System.Threading.Tasks.Task<PagedResourceBaseApplicationVersion> ApiV1ApplicationVersionsGetAsync (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<InlineResponse200> localVarResponse = await ApiV1ApplicationVersionsGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<PagedResourceBaseApplicationVersion> localVarResponse = await ApiV1ApplicationVersionsGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -475,8 +475,8 @@ namespace IO.Swagger.Api
         /// <param name="pageNumber">The page of results to return. Defaults to the first page (optional)</param>
         /// <param name="sortBy"> (optional)</param>
         /// <param name="sortOrder">Determines how results will be sorted. Allowed values: ascending, descending (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ApiV1ApplicationVersionsGetAsyncWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
+        /// <returns>Task of ApiResponse (PagedResourceBaseApplicationVersion)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagedResourceBaseApplicationVersion>> ApiV1ApplicationVersionsGetAsyncWithHttpInfo (string pageSize = null, string pageNumber = null, string sortBy = null, string sortOrder = null)
         {
 
             var localVarPath = "/api/v1/applicationVersions";
@@ -522,9 +522,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<PagedResourceBaseApplicationVersion>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (PagedResourceBaseApplicationVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagedResourceBaseApplicationVersion)));
             
         }
 

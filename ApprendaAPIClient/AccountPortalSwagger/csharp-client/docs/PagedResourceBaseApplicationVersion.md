@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CurrentPage** | **int?** |  | [optional] 
 **Href** | **string** |  | [optional] 
-**Items** | [**List&lt;InlineResponse200Items&gt;**](InlineResponse200Items.md) |  | 
-**NextPage** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
+**Items** | [**List&lt;ApplicationVersion&gt;**](ApplicationVersion.md) |  | 
+**NextPage** | [**ResourceBase**](ResourceBase.md) |  | [optional] 
 **PageSize** | **int?** |  | [optional] 
-**PreviousPage** | [**InlineResponse200Plans**](InlineResponse200Plans.md) |  | [optional] 
+**PreviousPage** | [**ResourceBase**](ResourceBase.md) |  | [optional] 
 **TotalItems** | **long?** |  | [optional] 
 **TotalPages** | **int?** |  | [optional] 
 

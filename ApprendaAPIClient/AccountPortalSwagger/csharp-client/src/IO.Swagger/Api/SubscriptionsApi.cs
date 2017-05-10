@@ -32,8 +32,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet (string applicationVersionKey);
+        /// <returns>UnpagedResourceBaseSubscription</returns>
+        UnpagedResourceBaseSubscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet (string applicationVersionKey);
 
         /// <summary>
         /// Get all subscriptions of an application version
@@ -43,8 +43,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetWithHttpInfo (string applicationVersionKey);
+        /// <returns>ApiResponse of UnpagedResourceBaseSubscription</returns>
+        ApiResponse<UnpagedResourceBaseSubscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Unsubscribe user from subscription
         /// </summary>
@@ -127,8 +127,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>InlineResponse2004Items</returns>
-        InlineResponse2004Items ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet (string applicationVersionKey, string locator);
+        /// <returns>Subscription</returns>
+        Subscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet (string applicationVersionKey, string locator);
 
         /// <summary>
         /// Get a subscription for an application version
@@ -139,8 +139,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>ApiResponse of InlineResponse2004Items</returns>
-        ApiResponse<InlineResponse2004Items> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetWithHttpInfo (string applicationVersionKey, string locator);
+        /// <returns>ApiResponse of Subscription</returns>
+        ApiResponse<Subscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetWithHttpInfo (string applicationVersionKey, string locator);
         /// <summary>
         /// Create a new subscription
         /// </summary>
@@ -150,8 +150,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost (string applicationVersionKey, Body body = null);
+        /// <returns>UnpagedResourceBaseSubscription</returns>
+        UnpagedResourceBaseSubscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost (string applicationVersionKey, SubscriptionRequest body = null);
 
         /// <summary>
         /// Create a new subscription
@@ -162,8 +162,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostWithHttpInfo (string applicationVersionKey, Body body = null);
+        /// <returns>ApiResponse of UnpagedResourceBaseSubscription</returns>
+        ApiResponse<UnpagedResourceBaseSubscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostWithHttpInfo (string applicationVersionKey, SubscriptionRequest body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -174,8 +174,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsync (string applicationVersionKey);
+        /// <returns>Task of UnpagedResourceBaseSubscription</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseSubscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsync (string applicationVersionKey);
 
         /// <summary>
         /// Get all subscriptions of an application version
@@ -185,8 +185,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsyncWithHttpInfo (string applicationVersionKey);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSubscription>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsyncWithHttpInfo (string applicationVersionKey);
         /// <summary>
         /// Unsubscribe user from subscription
         /// </summary>
@@ -269,8 +269,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>Task of InlineResponse2004Items</returns>
-        System.Threading.Tasks.Task<InlineResponse2004Items> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsync (string applicationVersionKey, string locator);
+        /// <returns>Task of Subscription</returns>
+        System.Threading.Tasks.Task<Subscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsync (string applicationVersionKey, string locator);
 
         /// <summary>
         /// Get a subscription for an application version
@@ -281,8 +281,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004Items)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004Items>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsyncWithHttpInfo (string applicationVersionKey, string locator);
+        /// <returns>Task of ApiResponse (Subscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Subscription>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsyncWithHttpInfo (string applicationVersionKey, string locator);
         /// <summary>
         /// Create a new subscription
         /// </summary>
@@ -292,8 +292,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsync (string applicationVersionKey, Body body = null);
+        /// <returns>Task of UnpagedResourceBaseSubscription</returns>
+        System.Threading.Tasks.Task<UnpagedResourceBaseSubscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsync (string applicationVersionKey, SubscriptionRequest body = null);
 
         /// <summary>
         /// Create a new subscription
@@ -304,8 +304,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsyncWithHttpInfo (string applicationVersionKey, Body body = null);
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSubscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSubscription>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsyncWithHttpInfo (string applicationVersionKey, SubscriptionRequest body = null);
         #endregion Asynchronous Operations
     }
 
@@ -423,10 +423,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet (string applicationVersionKey)
+        /// <returns>UnpagedResourceBaseSubscription</returns>
+        public UnpagedResourceBaseSubscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGet (string applicationVersionKey)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetWithHttpInfo(applicationVersionKey);
+             ApiResponse<UnpagedResourceBaseSubscription> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
         }
 
@@ -435,8 +435,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetWithHttpInfo (string applicationVersionKey)
+        /// <returns>ApiResponse of UnpagedResourceBaseSubscription</returns>
+        public ApiResponse< UnpagedResourceBaseSubscription > ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -482,9 +482,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (UnpagedResourceBaseSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSubscription)));
             
         }
 
@@ -493,10 +493,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsync (string applicationVersionKey)
+        /// <returns>Task of UnpagedResourceBaseSubscription</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseSubscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsync (string applicationVersionKey)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsyncWithHttpInfo(applicationVersionKey);
+             ApiResponse<UnpagedResourceBaseSubscription> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsyncWithHttpInfo(applicationVersionKey);
              return localVarResponse.Data;
 
         }
@@ -506,8 +506,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsyncWithHttpInfo (string applicationVersionKey)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSubscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSubscription>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsGetAsyncWithHttpInfo (string applicationVersionKey)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -553,9 +553,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (UnpagedResourceBaseSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSubscription)));
             
         }
 
@@ -1036,10 +1036,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>InlineResponse2004Items</returns>
-        public InlineResponse2004Items ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet (string applicationVersionKey, string locator)
+        /// <returns>Subscription</returns>
+        public Subscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGet (string applicationVersionKey, string locator)
         {
-             ApiResponse<InlineResponse2004Items> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetWithHttpInfo(applicationVersionKey, locator);
+             ApiResponse<Subscription> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetWithHttpInfo(applicationVersionKey, locator);
              return localVarResponse.Data;
         }
 
@@ -1049,8 +1049,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>ApiResponse of InlineResponse2004Items</returns>
-        public ApiResponse< InlineResponse2004Items > ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetWithHttpInfo (string applicationVersionKey, string locator)
+        /// <returns>ApiResponse of Subscription</returns>
+        public ApiResponse< Subscription > ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetWithHttpInfo (string applicationVersionKey, string locator)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -1099,9 +1099,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004Items>(localVarStatusCode,
+            return new ApiResponse<Subscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004Items)));
+                (Subscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Subscription)));
             
         }
 
@@ -1111,10 +1111,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>Task of InlineResponse2004Items</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004Items> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsync (string applicationVersionKey, string locator)
+        /// <returns>Task of Subscription</returns>
+        public async System.Threading.Tasks.Task<Subscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsync (string applicationVersionKey, string locator)
         {
-             ApiResponse<InlineResponse2004Items> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsyncWithHttpInfo(applicationVersionKey, locator);
+             ApiResponse<Subscription> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsyncWithHttpInfo(applicationVersionKey, locator);
              return localVarResponse.Data;
 
         }
@@ -1125,8 +1125,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="locator">Required. Unique Platform assigned locator id of the securable</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004Items)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004Items>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsyncWithHttpInfo (string applicationVersionKey, string locator)
+        /// <returns>Task of ApiResponse (Subscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Subscription>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsLocatorGetAsyncWithHttpInfo (string applicationVersionKey, string locator)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -1175,9 +1175,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004Items>(localVarStatusCode,
+            return new ApiResponse<Subscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004Items) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004Items)));
+                (Subscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Subscription)));
             
         }
 
@@ -1187,10 +1187,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost (string applicationVersionKey, Body body = null)
+        /// <returns>UnpagedResourceBaseSubscription</returns>
+        public UnpagedResourceBaseSubscription ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPost (string applicationVersionKey, SubscriptionRequest body = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostWithHttpInfo(applicationVersionKey, body);
+             ApiResponse<UnpagedResourceBaseSubscription> localVarResponse = ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostWithHttpInfo(applicationVersionKey, body);
              return localVarResponse.Data;
         }
 
@@ -1200,8 +1200,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostWithHttpInfo (string applicationVersionKey, Body body = null)
+        /// <returns>ApiResponse of UnpagedResourceBaseSubscription</returns>
+        public ApiResponse< UnpagedResourceBaseSubscription > ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostWithHttpInfo (string applicationVersionKey, SubscriptionRequest body = null)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -1255,9 +1255,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (UnpagedResourceBaseSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSubscription)));
             
         }
 
@@ -1267,10 +1267,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsync (string applicationVersionKey, Body body = null)
+        /// <returns>Task of UnpagedResourceBaseSubscription</returns>
+        public async System.Threading.Tasks.Task<UnpagedResourceBaseSubscription> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsync (string applicationVersionKey, SubscriptionRequest body = null)
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsyncWithHttpInfo(applicationVersionKey, body);
+             ApiResponse<UnpagedResourceBaseSubscription> localVarResponse = await ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsyncWithHttpInfo(applicationVersionKey, body);
              return localVarResponse.Data;
 
         }
@@ -1281,8 +1281,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="applicationVersionKey">Required. Concatenation of application alias and version alias as &#39;AppAlias-VersionAlias&#39;</param>
         /// <param name="body">Array of plans and the number of new subscriptions to create for each plan (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsyncWithHttpInfo (string applicationVersionKey, Body body = null)
+        /// <returns>Task of ApiResponse (UnpagedResourceBaseSubscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UnpagedResourceBaseSubscription>> ApiV1ApplicationVersionsApplicationVersionKeySubscriptionsPostAsyncWithHttpInfo (string applicationVersionKey, SubscriptionRequest body = null)
         {
             // verify the required parameter 'applicationVersionKey' is set
             if (applicationVersionKey == null)
@@ -1336,9 +1336,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<UnpagedResourceBaseSubscription>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (UnpagedResourceBaseSubscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpagedResourceBaseSubscription)));
             
         }
 

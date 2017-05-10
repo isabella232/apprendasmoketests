@@ -39,7 +39,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Href">Href.</param>
         /// <param name="Items">Items (required).</param>
-        public UnpagedResourceBaseSecurable(string Href = default(string), List<InlineResponse2002Items> Items = default(List<InlineResponse2002Items>))
+        public UnpagedResourceBaseSecurable(string Href = default(string), List<Securable> Items = default(List<Securable>))
         {
             // to ensure "Items" is required (not null)
             if (Items == null)
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<InlineResponse2002Items> Items { get; set; }
+        public List<Securable> Items { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

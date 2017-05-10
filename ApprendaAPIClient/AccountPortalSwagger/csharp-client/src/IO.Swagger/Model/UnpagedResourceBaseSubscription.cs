@@ -39,7 +39,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Href">Url to this resource (required).</param>
         /// <param name="Items">Items (required).</param>
-        public UnpagedResourceBaseSubscription(string Href = default(string), List<InlineResponse2004Items> Items = default(List<InlineResponse2004Items>))
+        public UnpagedResourceBaseSubscription(string Href = default(string), List<Subscription> Items = default(List<Subscription>))
         {
             // to ensure "Href" is required (not null)
             if (Href == null)
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<InlineResponse2004Items> Items { get; set; }
+        public List<Subscription> Items { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

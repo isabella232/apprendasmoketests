@@ -39,7 +39,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Href">Href.</param>
         /// <param name="Items">Items (required).</param>
-        public UnpagedResourceBasePlan(string Href = default(string), List<Apiv1applicationVersionsapplicationVersionKeyplansItems> Items = default(List<Apiv1applicationVersionsapplicationVersionKeyplansItems>))
+        public UnpagedResourceBasePlan(string Href = default(string), List<Plan> Items = default(List<Plan>))
         {
             // to ensure "Items" is required (not null)
             if (Items == null)
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Items
         /// </summary>
         [DataMember(Name="items", EmitDefaultValue=false)]
-        public List<Apiv1applicationVersionsapplicationVersionKeyplansItems> Items { get; set; }
+        public List<Plan> Items { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
