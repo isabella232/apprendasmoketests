@@ -6,3 +6,5 @@ packages/
 DefaultApprendaSmokeTests/bin/
 DevPortal.Swagger/DevPortal.Swagger/bin/
 DevPortal.Swagger/DevPortal.Swagger.Test/bin/
+ApprendaAPIClient/bin/
+ApprendaSmokeTests.sln.DotSettings.user
