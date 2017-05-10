@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApprendaSmokeTestsBase.Services;
+﻿using ApprendaAPIClient;
 using ApprendaSmokeTestsBase.ValueItems;
 
 namespace ApprendaSmokeTestsBase.Factories

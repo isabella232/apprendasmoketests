@@ -4,10 +4,12 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using ApprendaAPIClient;
 using ApprendaSmokeTestsBase.Factories;
 using ApprendaSmokeTestsBase.Repositories;
 using ApprendaSmokeTestsBase.Repositories.Implementation;
 using ApprendaSmokeTestsBase.Services;
+using ApprendaSmokeTestsBase.ValueItems;
 using ApprendaSmokeTestsBase.ValueItems.Implementation;
 
 namespace ApprendaSmokeTestsBase

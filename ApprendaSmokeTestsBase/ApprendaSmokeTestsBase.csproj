@@ -73,40 +73,26 @@
     <Compile Include="Repositories\Implementation\SingleUserLoginRepository.cs" />
     <Compile Include="Repositories\ISmokeTestApplicationRepository.cs" />
     <Compile Include="Repositories\IUserLoginRepository.cs" />
-    <Compile Include="Services\IApprendaApiClient.cs" />
-    <Compile Include="Services\Implementation\ApprendaSwaggerApiClient.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\AccountApiHelper.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\DefaultRestApiContext.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\GenericeApiHelper.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\Handlers.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\IRestApiClientHelper.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\RestApiProxyBase.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\RestAuthenticator.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\RestHelper.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\SocApiHelper.cs" />
-    <Compile Include="Services\Implementation\ClientHelpers\VerbMaintainingRedirectionHandler.cs" />
     <Compile Include="Services\ITelemetryReportingService.cs" />
     <Compile Include="ValueItems\ApiPortals.cs" />
-    <Compile Include="ValueItems\IConnectionSettings.cs" />
     <Compile Include="ValueItems\Implementation\ApprendaTestSession.cs" />
-    <Compile Include="ValueItems\Implementation\ConnectionSettings.cs" />
     <Compile Include="ValueItems\IApprendaTestSession.cs" />
     <Compile Include="ValueItems\Implementation\CreatedSmokeTestApplication.cs" />
-    <Compile Include="ValueItems\Implementation\UserLogin.cs" />
     <Compile Include="ValueItems\ISmokeTestApplication.cs" />
     <Compile Include="ValueItems\Implementation\SmokeTestApplication.cs" />
-    <Compile Include="ValueItems\IUserLogin.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ApprendaAPIClient\ApprendaAPIClient.csproj">
+      <Project>{9d3b3176-5845-4f9a-9ed4-b183a3c15679}</Project>
+      <Name>ApprendaAPIClient</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DevPortal.Swagger\DevPortal.Swagger\DevPortal.Swagger.csproj">
-      <Project>{4196ca90-9f7b-438b-89be-409b28e3c0ee}</Project>
-      <Name>DevPortal.Swagger</Name>
-    </ProjectReference>
+    <Folder Include="Services\Implementation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

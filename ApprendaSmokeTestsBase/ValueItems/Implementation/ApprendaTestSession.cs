@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using ApprendaAPIClient;
+using ApprendaAPIClient.Services.ClientHelpers;
 using ApprendaSmokeTestsBase.Factories;
 using ApprendaSmokeTestsBase.Services;
 using ApprendaSmokeTestsBase.Services.Implementation.ClientHelpers;
@@ -45,27 +48,14 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
             }
         }
 
-        public IApprendaApiClient GetClient(ApiPortals portalsToUse)
+        public async Task<IApprendaApiClient> GetClient(ApiPortals portalsToUse)
         {
-            switch (portalsToUse)
-            {
-                    case ApiPortals.Account:
-                        _currentHelper = new AccountApiHelper(_connectionSettings);
-                        break;
-                    case ApiPortals.Developer:
-                        _currentHelper = new GenericApiHelper(_connectionSettings, "developer");
-                        break;
-                    case ApiPortals.SOC:
-                        _currentHelper = new SocApiHelper(_connectionSettings);
-                        break;
-            }
+            var client = _clientFactory.GetV1Client(portalsToUse);
 
             if (string.IsNullOrEmpty(_sessionToken))
             {
-                _sessionToken = _currentHelper.Authenticator?.Login(_connectionSettings.UserLogin.UserName,
-                    _connectionSettings.UserLogin.Password);
+                _sessionToken = await client.Login(_connectionSettings.UserLogin.UserName, _connectionSettings.UserLogin.Password);
             }
-            _client = _clientFactory.GetV1Client(portalsToUse);
 
             _reportingService?.ReportInfo($"Starting test {_testName}", new List<string> {"teststart", _testName});
             return _client;

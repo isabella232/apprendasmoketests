@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ApprendaSmokeTestsBase.ValueItems;
 using Xunit;
 
@@ -17,7 +13,6 @@ namespace DefaultApprendaSmokeTests.Tests
             {
                 var client = session.GetClient(ApiPortals.Developer);
 
-                var apps = await client.GetAllApplications();
             }
         }
     }
