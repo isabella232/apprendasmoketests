@@ -15,7 +15,6 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
     {
         private readonly IApprendaApiClientFactory _clientFactory;
         private IApprendaApiClient _currentApiClient;
-        private readonly IConnectionSettings _connectionSettings;
         private readonly ITelemetryReportingService _reportingService;
         private readonly string _testName;
         private readonly IUserLogin _login;
@@ -25,7 +24,7 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
             ITelemetryReportingService reportingService, string testName, IUserLogin loginToUse = null)
         {
             _clientFactory = clientFactory;
-            _connectionSettings = connectionSettings;
+            ConnectionSettings = connectionSettings;
             _reportingService = reportingService;
             _testName = testName;
             _login = loginToUse ?? connectionSettings.UserLogin;
@@ -63,5 +62,7 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
 
             return _currentApiClient;
         }
+
+        public IConnectionSettings ConnectionSettings { get; }
     }
 }

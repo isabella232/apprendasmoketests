@@ -15,13 +15,14 @@ namespace DefaultApprendaSmokeTests.Tests
         {
             using (var session = StartSession())
             {
-                await DeleteAppIfExists(smokeTestAppToUse);
-
                 var randomVal = new Random(DateTime.Now.Millisecond).Next(10000);
-                var href = $"/apps/{smokeTestAppToUse}";
+                var alias = smokeTestAppToUse + randomVal;
+                await DeleteAppIfExists(alias);
+
+                var href = session.ConnectionSettings.AppsUrl + $"/developer/api/v1/apps/{alias}";
                 var app = new Application(href)
                 {
-                    Alias = smokeTestAppToUse,
+                    Alias = alias,
                     Description = $"Created by REST API {randomVal}",
                     Name = $"Created by REST API {randomVal}",
                     Href = href
@@ -33,6 +34,17 @@ namespace DefaultApprendaSmokeTests.Tests
                 Assert.True(res);
 
                 //check it exists!
+                var getRes = await client.GetApplication(app.Alias);
+
+                Assert.NotNull(getRes);
+                Assert.Equal(app.Alias.ToLower(), getRes.Alias.ToLower());
+                Assert.Equal(app.Description, getRes.Description);
+                Assert.Equal(app.Name, getRes.Name);
+                Assert.Equal(app.Href, getRes.Href);
+
+                //check promotion?
+
+                await DeleteAppIfExists(alias);
             }
         }
 

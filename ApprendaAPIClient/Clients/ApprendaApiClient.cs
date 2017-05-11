@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
-using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -107,13 +107,17 @@ namespace ApprendaAPIClient.Clients
         {
             var helper = new GenericApiHelper(ConnectionSettings, helperType);
             var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri(path);
-            var client = GetClient(uri, SessionToken);
 
-            var formatter = new JsonMediaTypeFormatter { Indent = true };
-            formatter.SerializerSettings.Converters.Add(new StringEnumConverter());
-            var res = await client.PostAsJsonAsync(uri, body);
+            var value = JsonConvert.SerializeObject(body);
+            var res = "";
+            using (var wc = new WebClient())
+            {
+                wc.Headers.Add("ApprendaSessionToken", SessionToken);
+                wc.Headers.Add("Content-Type", "application/json");
+                res = await wc.UploadStringTaskAsync(uri, value);
+            }
 
-            return res.IsSuccessStatusCode;
+            return string.IsNullOrWhiteSpace(res);
         }
         private HttpClient GetClient(Uri baseAddress, string authenticationToken = null, TimeSpan? timeout = null, string mediaType = null)
         {

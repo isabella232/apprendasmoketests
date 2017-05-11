@@ -10,5 +10,7 @@ namespace ApprendaSmokeTestsBase.ValueItems
     public interface IApprendaTestSession : IDisposable
     {
         Task<IApprendaApiClient> GetClient(ApiPortals portalsToUse);
+
+        IConnectionSettings ConnectionSettings { get; }
     }
 }

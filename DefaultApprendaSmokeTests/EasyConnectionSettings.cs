@@ -6,7 +6,7 @@ namespace DefaultApprendaSmokeTests
 {
     internal class EasyConnectionSettings : IConnectionSettings
     {
-        public string AppsUrl => "https://apps.apprenda.yards";
+        public string AppsUrl => "https://apps.apprenda.stella";
         public IUserLogin UserLogin { get; set; } = 
             new UserLogin {UserName = "fluffy@apprenda.com", Password = "password"};
 
