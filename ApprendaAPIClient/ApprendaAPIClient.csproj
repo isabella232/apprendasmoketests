@@ -67,7 +67,7 @@
     <Compile Include="IUserLogin.cs" />
     <Compile Include="Models\AccountPortal\ApplicationVersion.cs" />
     <Compile Include="Models\AccountPortal\ApplicationVersionResource.cs" />
-    <Compile Include="Models\AccountPortal\Cloud.cs" />
+    <Compile Include="Models\SOC\Cloud.cs" />
     <Compile Include="Models\AccountPortal\NoteResource.cs" />
     <Compile Include="Models\AccountPortal\PlanItemResource.cs" />
     <Compile Include="Models\AccountPortal\PlanRequestResource.cs" />
@@ -82,6 +82,7 @@
     <Compile Include="Models\DeveloperPortal\PublishReportCardDTO.cs" />
     <Compile Include="Models\PagedResourceBase.cs" />
     <Compile Include="Models\ResourceBase.cs" />
+    <Compile Include="Models\SOC\CustomProperty.cs" />
     <Compile Include="Models\SOC\HealthReport.cs" />
     <Compile Include="Models\SOC\Host.cs" />
     <Compile Include="Models\UnpagedResourceBase.cs" />

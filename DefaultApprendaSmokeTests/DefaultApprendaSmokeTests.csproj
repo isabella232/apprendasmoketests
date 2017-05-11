@@ -76,6 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\ApplicationSmokeTests.cs" />
     <Compile Include="Tests\CloudsTests.cs" />
+    <Compile Include="Tests\CustomPropertiesPublicTests.cs" />
     <Compile Include="Tests\HealthReportSmokeTest.cs" />
   </ItemGroup>
   <ItemGroup>

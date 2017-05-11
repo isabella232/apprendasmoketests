@@ -17,7 +17,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Application = ApprendaAPIClient.Models.DeveloperPortal.Application;
 using ByteArrayContent = System.Net.Http.ByteArrayContent;
-using Cloud = ApprendaAPIClient.Models.AccountPortal.Cloud;
+using Cloud = ApprendaAPIClient.Models.SOC.Cloud;
+using CustomProperty = ApprendaAPIClient.Models.SOC.CustomProperty;
 using Version = IO.Swagger.Model.Version;
 
 namespace ApprendaAPIClient.Clients
@@ -69,9 +70,20 @@ namespace ApprendaAPIClient.Clients
             return GetResultAsync<IEnumerable<Host>>("hosts", "socinternal");
         }
 
+
         public Task<PagedResourceBase<HealthReport>> GetHealthReports(string hostName)
         {
             return GetResultAsync<PagedResourceBase<HealthReport>>($"hosts/{hostName}/healthreports", "soc");
+        }
+
+        public Task<PagedResourceBase<CustomProperty>> GetAllCustomProperties()
+        {
+            return GetResultAsync<PagedResourceBase<CustomProperty>>("customproperties");
+        }
+
+        public Task<CustomProperty> GetCustomProperty(int id)
+        {
+            return GetResultAsync<CustomProperty>($"customproperties/{id}");
         }
 
         public async Task<ReportCard> SetArchive(string appAlias, string versionAlias, bool destructive, byte[] archive)
@@ -120,6 +132,15 @@ namespace ApprendaAPIClient.Clients
             return PostAsync($"versions/{appAlias}/{versionAlias}", null, "developer", qp);
         }
 
+        public Task<UnpagedResourceBase<Cloud>> GetClouds()
+        {
+            return GetResultAsync<UnpagedResourceBase<Cloud>>("clouds", "soc");
+        }
+
+        public Task<Cloud> GetCloud(int id)
+        {
+            return GetResultAsync<Cloud>($"clouds/{id}", "soc");
+        }
 
         protected virtual async Task<T> GetResultAsync<T>(string path, string helperType = "developer", [CallerMemberName] string callingMethod = "")
         {
@@ -216,16 +237,6 @@ namespace ApprendaAPIClient.Clients
             {
                 client.Timeout = timeout.Value;
             }
-        }
-
-        public Task<UnpagedResourceBase<Cloud>> GetClouds()
-        {
-            return GetResultAsync<UnpagedResourceBase<Cloud>>("clouds", "soc");
-        }
-
-        public Task<Cloud> GetCloud(int id)
-        {
-            return GetResultAsync<Cloud>($"clouds/{id}", "soc");
         }
     }
 }

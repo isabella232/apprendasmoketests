@@ -1,13 +1,10 @@
 ﻿using System.Threading.Tasks;
 using ApprendaAPIClient.Models;
-using Cloud = ApprendaAPIClient.Models.AccountPortal.Cloud;
+using Cloud = ApprendaAPIClient.Models.SOC.Cloud;
 
 namespace ApprendaAPIClient.Clients
 {
     public interface IApprendaAccountPortalApiClient
     {
-        Task<UnpagedResourceBase<Cloud>> GetClouds();
-
-        Task<Cloud> GetCloud(int id);
     }
 }
