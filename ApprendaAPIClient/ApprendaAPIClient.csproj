@@ -79,11 +79,14 @@
     <Compile Include="Models\DeveloperPortal\Application.cs" />
     <Compile Include="Models\PagedResourceBase.cs" />
     <Compile Include="Models\ResourceBase.cs" />
+    <Compile Include="Models\SOC\HealthReport.cs" />
+    <Compile Include="Models\SOC\Host.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClientHelpers\AccountApiHelper.cs" />
     <Compile Include="Services\ClientHelpers\DefaultRestApiContext.cs" />
     <Compile Include="Services\ClientHelpers\GenericeApiHelper.cs" />
     <Compile Include="Services\ClientHelpers\Handlers.cs" />
+    <Compile Include="Services\ClientHelpers\InternalSOCHelper.cs" />
     <Compile Include="Services\ClientHelpers\IRestApiClientHelper.cs" />
     <Compile Include="Services\ClientHelpers\RestApiProxyBase.cs" />
     <Compile Include="Services\ClientHelpers\RestAuthenticator.cs" />

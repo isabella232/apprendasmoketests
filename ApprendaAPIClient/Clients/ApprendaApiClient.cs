@@ -5,6 +5,8 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using ApprendaAPIClient.Models;
+using ApprendaAPIClient.Models.SOC;
 using ApprendaAPIClient.Services;
 using ApprendaAPIClient.Services.ClientHelpers;
 using IO.Swagger.Model;
@@ -62,9 +64,24 @@ namespace ApprendaAPIClient.Clients
             return GetResultAsync<EnrichedVersion>("versions/" + appAlias + "/" + versionAlias);
         }
 
+        public Task<IEnumerable<Host>> GetAllHosts()
+        {
+            return GetResultAsync<IEnumerable<Host>>("hosts", "socinternal");
+        }
+
+        public Task<PagedResourceBase<HealthReport>> GetHealthReports(string hostName)
+        {
+            return GetResultAsync<PagedResourceBase<HealthReport>>($"hosts/{hostName}/healthreports", "soc");
+        }
+
+
+
         protected virtual async Task<T> GetResultAsync<T>(string path, string helperType = "developer", [CallerMemberName] string callingMethod = "")
         {
-            var helper = new GenericApiHelper(ConnectionSettings, helperType);
+            var helper = helperType == "socinternal"
+                ? (IRestApiClientHelper) new InternalSOCHelper(ConnectionSettings, "soc") 
+                :  new GenericApiHelper(ConnectionSettings, helperType);
+
             var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri(path);
             var client = GetClient(uri, SessionToken);
 
@@ -94,8 +111,7 @@ namespace ApprendaAPIClient.Clients
 
             var formatter = new JsonMediaTypeFormatter { Indent = true };
             formatter.SerializerSettings.Converters.Add(new StringEnumConverter());
-
-            var res = await client.PostAsync(uri, body, formatter);
+            var res = await client.PostAsJsonAsync(uri, body);
 
             return res.IsSuccessStatusCode;
         }
@@ -121,5 +137,6 @@ namespace ApprendaAPIClient.Clients
                 client.Timeout = timeout.Value;
             }
         }
+
     }
 }

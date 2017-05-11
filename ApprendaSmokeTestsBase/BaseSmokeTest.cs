@@ -94,11 +94,17 @@ namespace ApprendaSmokeTestsBase
             return upgraydd;
         }
 
-        protected Task DeleteAppIfExists(string appAlias)
+        protected async Task DeleteAppIfExists(string appAlias)
         {
             var client = GetClient();
 
-            return client.DeleteApplication(appAlias);
+            try
+            {
+                await client.DeleteApplication(appAlias);
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private IApprendaApiClient GetClient()
