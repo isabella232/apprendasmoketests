@@ -41,8 +41,18 @@ namespace DefaultApprendaSmokeTests.Tests
                 Assert.Equal(app.Description, getRes.Description);
                 Assert.Equal(app.Name, getRes.Name);
                 Assert.Equal(app.Href, getRes.Href);
+                Assert.NotNull(getRes.CurrentVersion);
 
-                //check promotion?
+                //check adding the archive
+                var archive = await GetArchiveForSmokeTestApplication(smokeTestAppToUse);
+                Assert.NotNull(archive);
+
+                var rc = await client.PatchVersion(getRes.Alias, getRes.CurrentVersion.Alias, true,
+                    archive.ArchiveContents);
+               
+                Assert.NotNull(rc);
+
+                //we can now try to promote
 
                 await DeleteAppIfExists(alias);
             }

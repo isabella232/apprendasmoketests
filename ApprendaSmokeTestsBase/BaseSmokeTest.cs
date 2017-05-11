@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using ApprendaAPIClient;
 using ApprendaAPIClient.Factories;
 using ApprendaAPIClient.Services;
 using ApprendaSmokeTestsBase.Repositories;
 using ApprendaSmokeTestsBase.Repositories.Implementation;
-using ApprendaSmokeTestsBase.Services;
 using ApprendaSmokeTestsBase.ValueItems;
 using ApprendaSmokeTestsBase.ValueItems.Implementation;
 
@@ -120,6 +117,11 @@ namespace ApprendaSmokeTestsBase
             catch (Exception)
             {
             }
+        }
+
+        protected Task<ISmokeTestApplication> GetArchiveForSmokeTestApplication(string name)
+        {
+            return _smokeTestApplicationRepository.GetSmokeTestApplication(name);
         }
 
         private IApprendaApiClient GetClient()

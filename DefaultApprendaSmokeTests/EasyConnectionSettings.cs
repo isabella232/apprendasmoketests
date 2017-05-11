@@ -13,7 +13,7 @@ namespace DefaultApprendaSmokeTests
         public IUserLogin AdminUserLogin { get; set; } =
             new UserLogin {UserName = "admin@apprenda.com", Password = "password"};
 
-        public string IntegrationTestResourcesDirectory => "";
+        public string IntegrationTestResourcesDirectory => "..\\..\\Archives\\6.7";
         public string RepositoryServer => "";
         public string AdminTenantAlias => string.Empty;
     }

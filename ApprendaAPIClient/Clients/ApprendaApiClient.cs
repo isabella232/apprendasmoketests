@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading.Tasks;
 using ApprendaAPIClient.Models;
+using ApprendaAPIClient.Models.DeveloperPortal;
 using ApprendaAPIClient.Models.SOC;
 using ApprendaAPIClient.Services;
 using ApprendaAPIClient.Services.ClientHelpers;
@@ -13,6 +16,7 @@ using IO.Swagger.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Application = ApprendaAPIClient.Models.DeveloperPortal.Application;
+using ByteArrayContent = System.Net.Http.ByteArrayContent;
 using Version = IO.Swagger.Model.Version;
 
 namespace ApprendaAPIClient.Clients
@@ -74,6 +78,36 @@ namespace ApprendaAPIClient.Clients
             return GetResultAsync<PagedResourceBase<HealthReport>>($"hosts/{hostName}/healthreports", "soc");
         }
 
+        public async Task<ReportCard> SetArchive(string appAlias, string versionAlias, bool destructive, byte[] archive)
+        {
+            var queryParams = new {action = "setArchive", destructive = 1,};
+            var res = await PostBinaryAsync<ReportCard>($"versions/{appAlias}/{versionAlias}", archive, queryParams);
+
+            return res;
+        }
+
+        public Task<PublishReportCardDTO> PatchVersion(string appAlias, string versionAlias, bool constructive, 
+            byte[] file,
+            string stage = null, string newVersionAlias = null, string newVersionName = null,
+            string useScalingSettingsFrom = null, bool async = false)
+        {
+            //https://apps.apprenda.stella/developer/api/v1/versions/archivesearch2017/v1?action=patch&patchMode=constructive&newVersionAlias=&newVersionName=&stage=&accept_override=text/html&async=true
+
+            var queryParams =
+                new
+                {
+                    action = "patch",
+                    patchMode = constructive? "constructive": "destructive",
+                    async = async,
+                    newVersionAlias = newVersionAlias,
+                    newVersionName = newVersionName,
+                    stage = stage,
+                    accept_override = "text / html"
+
+                };
+
+            return PostBinaryAsync<PublishReportCardDTO>($"versions/{appAlias}/{versionAlias}", file, queryParams);
+        }
 
 
         protected virtual async Task<T> GetResultAsync<T>(string path, string helperType = "developer", [CallerMemberName] string callingMethod = "")
@@ -119,6 +153,37 @@ namespace ApprendaAPIClient.Clients
 
             return string.IsNullOrWhiteSpace(res);
         }
+
+        protected virtual async Task<T> PostBinaryAsync<T>(string path, 
+            byte[] file, object queryParams,
+            string helperType = "developer", [CallerMemberName] string callingMethod = "")
+        {
+            var helper = new GenericApiHelper(ConnectionSettings, helperType);
+
+            var builder = new ClientUriBuilder(helper.ApiRoot);
+            var uri =  builder.BuildUri(path, null, queryParams);
+
+            var client = new HttpClient();
+
+            var response = await client.PostAsync(uri, new ByteArrayContent(file));
+
+            if (response == null || !response.IsSuccessStatusCode)
+            {
+                return default(T);
+            }
+
+            var retString = await response.Content.ReadAsStringAsync();
+
+            try
+            {
+                return JsonConvert.DeserializeObject<T>(retString);
+            }
+            catch (Exception e)
+            {
+                return default(T);
+            }
+        }
+
         private HttpClient GetClient(Uri baseAddress, string authenticationToken = null, TimeSpan? timeout = null, string mediaType = null)
         {
             var client = RestApiProxyBase.GetVerbMaintainingClient();

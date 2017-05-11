@@ -72,7 +72,7 @@
     <Compile Include="ConsoleTelemetryService.cs" />
     <Compile Include="EasyConnectionSettings.cs" />
     <Compile Include="EasySmokeTest.cs" />
-    <Compile Include="NoOpSmokeTestApplicationRepository.cs" />
+    <Compile Include="SimpleLocalSmokeTestApplicationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\ApplicationSmokeTests.cs" />
     <Compile Include="Tests\HealthReportSmokeTest.cs" />
@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Archives\6.7\Hello World Archive.zip" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

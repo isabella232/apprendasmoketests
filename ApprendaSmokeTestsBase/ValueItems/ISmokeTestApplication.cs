@@ -18,5 +18,7 @@ namespace ApprendaSmokeTestsBase.ValueItems
         /// The ID of the application on the platform
         /// </summary>
         Guid? ApplicationId { get; set; }
+
+        byte[] ArchiveContents { get; set; }
     }
 }

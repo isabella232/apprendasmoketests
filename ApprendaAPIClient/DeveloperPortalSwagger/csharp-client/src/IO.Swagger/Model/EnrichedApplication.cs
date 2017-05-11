@@ -304,6 +304,7 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="currentVersion", EmitDefaultValue=false)]
         public Version CurrentVersion { get; set; }
+
         /// <summary>
         /// Gets or Sets TransitioningVersion
         /// </summary>

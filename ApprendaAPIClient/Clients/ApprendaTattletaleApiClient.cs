@@ -50,5 +50,16 @@ namespace ApprendaAPIClient.Clients
 
             return res;
         }
+
+        protected override async Task<T> PostBinaryAsync<T>(string path, byte[] file, object queryParams, string helperType = "developer",
+            string callingMethod = "")
+        {
+            var tags = new List<string> { "clientcall", callingMethod };
+            await _reportingService.ReportInfo("Starting binary POST request to " + path, tags);
+            var res = await base.PostBinaryAsync<T>(path, file, queryParams, helperType);
+            await _reportingService.ReportInfo("Finished binary POST request to " + path, tags);
+
+            return res;
+        }
     }
 }

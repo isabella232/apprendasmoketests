@@ -14,7 +14,8 @@ namespace DefaultApprendaSmokeTests
     public abstract class EasySmokeTest : ApprendaSmokeTestsBase.BaseSmokeTest
     {
         protected EasySmokeTest():
-            base(new EasyConnectionSettingsFactory(), null, new ConsoleTelemetryService())
+            base(new EasyConnectionSettingsFactory(), new SimpleLocalSmokeTestApplicationRepository(new EasyConnectionSettingsFactory()), 
+                new ConsoleTelemetryService())
         {
 
         }
