@@ -49,11 +49,12 @@ namespace DefaultApprendaSmokeTests.Tests
 
                 var rc = await client.PatchVersion(getRes.Alias, getRes.CurrentVersion.Alias, true,
                     archive.ArchiveContents);
-               
-                Assert.NotNull(rc);
+              
 
                 //we can now try to promote
+                await client.PromoteVersion(getRes.Alias, getRes.CurrentVersion.Alias, ApplicationVersionStage.Sandbox);
 
+                //get and check we promoted
                 await DeleteAppIfExists(alias);
             }
         }

@@ -41,11 +41,12 @@ namespace ApprendaAPIClient.Clients
             return res;
         }
 
-        protected override async Task<bool> PostAsync(string path, object body, string helperType = "developer", string callingMethod = "")
+        protected override async Task<bool> PostAsync(string path, object body, string helperType = "developer", 
+            object queryParams = null, string callingMethod = "")
         {
             var tags = new List<string> { "clientcall", callingMethod };
             await _reportingService.ReportInfo("Starting POST request to " + path, tags);
-            var res = await base.PostAsync(path, body, helperType);
+            var res = await base.PostAsync(path, body, helperType, queryParams);
             await _reportingService.ReportInfo("Finished POST request to " + path, tags);
 
             return res;

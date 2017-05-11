@@ -77,6 +77,7 @@
     <Compile Include="Models\AccountPortal\SubscriptionResource.cs" />
     <Compile Include="Models\AccountPortal\UserResource.cs" />
     <Compile Include="Models\DeveloperPortal\Application.cs" />
+    <Compile Include="Models\DeveloperPortal\ApplicationVersionStage.cs" />
     <Compile Include="Models\DeveloperPortal\PublishReportCardDTO.cs" />
     <Compile Include="Models\PagedResourceBase.cs" />
     <Compile Include="Models\ResourceBase.cs" />

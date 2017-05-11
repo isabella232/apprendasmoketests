@@ -33,11 +33,6 @@ namespace ApprendaAPIClient.Clients
         {
         }
 
-        public Task PromoteApp(string appAlias)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<IEnumerable<Application>> GetApplications()
         {
             return GetResultAsync<IEnumerable<Application>>("apps");
@@ -87,8 +82,7 @@ namespace ApprendaAPIClient.Clients
         }
 
         public Task<PublishReportCardDTO> PatchVersion(string appAlias, string versionAlias, bool constructive, 
-            byte[] file,
-            string stage = null, string newVersionAlias = null, string newVersionName = null,
+            byte[] file, string newVersionAlias = null, string newVersionName = null,
             string useScalingSettingsFrom = null, bool async = false)
         {
             //https://apps.apprenda.stella/developer/api/v1/versions/archivesearch2017/v1?action=patch&patchMode=constructive&newVersionAlias=&newVersionName=&stage=&accept_override=text/html&async=true
@@ -101,12 +95,28 @@ namespace ApprendaAPIClient.Clients
                     async = async,
                     newVersionAlias = newVersionAlias,
                     newVersionName = newVersionName,
-                    stage = stage,
                     accept_override = "text / html"
 
                 };
 
             return PostBinaryAsync<PublishReportCardDTO>($"versions/{appAlias}/{versionAlias}", file, queryParams);
+        }
+
+        public Task<bool> PromoteVersion(string appAlias, string versionAlias, ApplicationVersionStage desiredStage,
+            bool waitForMinInstanceCount = false, bool inheritPublishedScalingSettings = false, bool async = true)
+        {
+            //https://apps.apprenda.stella/developer/shim/api/v1/versions/archivesearch2017/v1?async=true&shim_action=promote
+
+            var qp = new
+            {
+                async = async,
+                action = "promote",
+                waitForMinInstanceCount = waitForMinInstanceCount,
+                stage = desiredStage.ToString(),
+                inheritPublishedScalingSettings = inheritPublishedScalingSettings 
+            };
+
+            return PostAsync($"versions/{appAlias}/{versionAlias}", null, "developer", qp);
         }
 
 
@@ -137,10 +147,10 @@ namespace ApprendaAPIClient.Clients
         }
 
         protected virtual async Task<bool> PostAsync(string path, object body, string helperType = "developer",
-            [CallerMemberName] string callingMethod = "")
+           object queryParams = null, [CallerMemberName] string callingMethod = "")
         {
             var helper = new GenericApiHelper(ConnectionSettings, helperType);
-            var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri(path);
+            var uri = new ClientUriBuilder(helper.ApiRoot).BuildUri(path, null, queryParams);
 
             var value = JsonConvert.SerializeObject(body);
             var res = "";

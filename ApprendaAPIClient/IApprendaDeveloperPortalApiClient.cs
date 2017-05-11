@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ApprendaAPIClient.Models;
 using ApprendaAPIClient.Models.DeveloperPortal;
 using IO.Swagger.Model;
 using Application = ApprendaAPIClient.Models.DeveloperPortal.Application;
@@ -13,8 +9,6 @@ namespace ApprendaAPIClient
 {
     public interface IApprendaDeveloperPortalApiClient
     {
-        Task PromoteApp(string appAlias);
-
         Task<IEnumerable<Application>> GetApplications();
 
         Task<EnrichedApplication> GetApplication(string appAlias);
@@ -29,7 +23,13 @@ namespace ApprendaAPIClient
 
         Task<PublishReportCardDTO> PatchVersion(string appAlias, string versionAlias, bool constructive,
             byte[] file,
-            string stage = null, string newVersionAlias = null, string newVersionName = null,
+            string newVersionAlias = null, string newVersionName = null,
             string useScalingSettingsFrom = null, bool async = false);
+
+        Task<bool> PromoteVersion(string appAlias, string versionAlias, 
+            ApplicationVersionStage desiredStage,
+            bool waitForMinInstanceCount = false,
+            bool inheritPublishedScalingSettings = false,
+            bool async= true);
     }
 }
