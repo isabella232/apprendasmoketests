@@ -15,6 +15,23 @@ ApprendaAPIClient:
    to the client factory.  This allows a consumer to do things like sending timestamped proxy calls and tests to Splunk or Elk,
    for example.
 
+   To use - instantiate the ApprendaApiClientFactory, and call GetV1Client.  This will give you a client that can talk to the platform
+   specified in your ConnectionSettings.
+
+   Optional injected services:
+   ITelemetryReportingService - allows the calling assembly to provide a service which will give detailed messages about when a
+   test, or proxy call, begins and ends.  Useful for creating timestamped data on how long things take, especially over many
+   repetitions.
+
+   IUserLoginRepository - allows the calling assembly to provide users and admin users to tests by whatever logic they want
+
+   ISmokeTestApplicationRepository - allows the calling assembly to provide custom code for retrieving application archives for tests
+
+   IConnectionSettingsFactory - allows the user to extend how we get our basic connection information (where Apprenda is, etc).  
+   Useful if a test writer needs to use configuration files, or some other method rather than changing code.
+
+
+
 ApprendaSmokeTestBase - 
    This provides base classes for easily construction integration/smoke tests.  Consuming assemblies should extend the 
    SmokeTestBase class, and implement the services it consumes if desired.  Otherwise simple services to run off of hardcoded
