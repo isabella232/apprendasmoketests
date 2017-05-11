@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ApprendaAPIClient.Services.ClientHelpers;
 
-namespace ApprendaAPIClient
+namespace ApprendaAPIClient.Clients
 {
     public abstract class BaseApprendaApiClient
     {

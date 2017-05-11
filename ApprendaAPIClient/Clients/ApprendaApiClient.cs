@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Application = ApprendaAPIClient.Models.DeveloperPortal.Application;
 using ByteArrayContent = System.Net.Http.ByteArrayContent;
+using Cloud = ApprendaAPIClient.Models.AccountPortal.Cloud;
 using Version = IO.Swagger.Model.Version;
 
 namespace ApprendaAPIClient.Clients
@@ -217,5 +218,14 @@ namespace ApprendaAPIClient.Clients
             }
         }
 
+        public Task<UnpagedResourceBase<Cloud>> GetClouds()
+        {
+            return GetResultAsync<UnpagedResourceBase<Cloud>>("clouds", "soc");
+        }
+
+        public Task<Cloud> GetCloud(int id)
+        {
+            return GetResultAsync<Cloud>($"clouds/{id}", "soc");
+        }
     }
 }

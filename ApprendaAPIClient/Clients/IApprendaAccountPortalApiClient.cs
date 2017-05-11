@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ApprendaAPIClient.Models;
-using ApprendaAPIClient.Models.AccountPortal;
-using IO.Swagger.Model;
+using Cloud = ApprendaAPIClient.Models.AccountPortal.Cloud;
 
-namespace ApprendaAPIClient
+namespace ApprendaAPIClient.Clients
 {
     public interface IApprendaAccountPortalApiClient
     {
+        Task<UnpagedResourceBase<Cloud>> GetClouds();
+
+        Task<Cloud> GetCloud(int id);
     }
 }
