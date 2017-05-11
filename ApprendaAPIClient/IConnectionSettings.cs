@@ -17,9 +17,11 @@ namespace ApprendaAPIClient
         string AppsUrl { get; }
 
         /// <summary>
-        /// User to login as for this test
+        /// User to login as.  Should not be an admin
         /// </summary>
         IUserLogin UserLogin { get; set; }
+
+        IUserLogin AdminUserLogin { get; set; }
 
         /// <summary>
         /// Data directory for files to retrieve to be used by the test

@@ -18,16 +18,17 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
         private readonly IConnectionSettings _connectionSettings;
         private readonly ITelemetryReportingService _reportingService;
         private readonly string _testName;
-
+        private readonly IUserLogin _login;
         private string _sessionToken;
 
         public ApprendaTestSession(IApprendaApiClientFactory clientFactory, IConnectionSettings connectionSettings,
-            ITelemetryReportingService reportingService, string testName)
+            ITelemetryReportingService reportingService, string testName, IUserLogin loginToUse = null)
         {
             _clientFactory = clientFactory;
             _connectionSettings = connectionSettings;
             _reportingService = reportingService;
             _testName = testName;
+            _login = loginToUse ?? connectionSettings.UserLogin;
         }
 
         public void Dispose()
@@ -57,7 +58,7 @@ namespace ApprendaSmokeTestsBase.ValueItems.Implementation
 
             if (string.IsNullOrEmpty(_sessionToken))
             {
-                _sessionToken = await _currentApiClient.Login(_connectionSettings.UserLogin.UserName, _connectionSettings.UserLogin.Password);
+                _sessionToken = await _currentApiClient.Login(_login.UserName, _login.Password);
             }
 
             return _currentApiClient;

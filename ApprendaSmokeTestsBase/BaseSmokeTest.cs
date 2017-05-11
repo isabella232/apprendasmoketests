@@ -55,6 +55,21 @@ namespace ApprendaSmokeTestsBase
             return session;
         }
 
+        protected IApprendaTestSession StartAdminSession([CallerMemberName] string testName = "")
+        {
+            var connectionProperties = _connectionSettingsFactory.GetConnectionSettings();
+            if (connectionProperties.AdminUserLogin == null)
+            {
+                connectionProperties.AdminUserLogin = _userLoginRepository.GetAdminUserLogin();
+            }
+            var session = new ApprendaTestSession(_apiClientFactory, connectionProperties, _reportingService, testName, connectionProperties.AdminUserLogin);
+
+            //ping that we've started!
+            _reportingService?.ReportInfo($"Starting test {testName} as admin", new List<string> { "teststart", testName });
+
+            return session;
+        }
+
         protected IApprendaTestSession StartSession(string userName, string password, [CallerMemberName] string testName = "")
         {
             var connectionProperties = _connectionSettingsFactory.GetConnectionSettings();

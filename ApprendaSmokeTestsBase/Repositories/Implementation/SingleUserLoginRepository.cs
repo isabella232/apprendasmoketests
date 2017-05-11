@@ -27,5 +27,11 @@ namespace ApprendaSmokeTestsBase.Repositories.Implementation
 
             return settings.UserLogin;
         }
+
+        public IUserLogin GetAdminUserLogin()
+        {
+            var settings = _connectionSettingsFactory.GetConnectionSettings();
+            return settings.AdminUserLogin;
+        }
     }
 }

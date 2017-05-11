@@ -15,5 +15,7 @@ namespace ApprendaSmokeTestsBase.Repositories
         /// </summary>
         /// <returns></returns>
         IUserLogin GetNextAvailableUserLogin();
+
+        IUserLogin GetAdminUserLogin();
     }
 }

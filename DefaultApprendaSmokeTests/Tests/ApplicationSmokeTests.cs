@@ -39,7 +39,7 @@ namespace DefaultApprendaSmokeTests.Tests
         [Fact]
         public async Task ApplicationsExistOnPlatformAndHaveVersion()
         {
-            using (var session = StartSession())
+            using (var session = StartAdminSession())
             {
                 var client = await session.GetClient(ApiPortals.Developer);
 
